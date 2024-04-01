@@ -59,8 +59,8 @@ h3{
 .learn-btn{
     max-width: 200px;
     text-align: center;
-    padding: 5px;
-    border-radius: 3px;
+    padding: 8px;
+    border-radius: 4px;
     color: white;
     display: block;
     background: #545CA0;
@@ -102,12 +102,12 @@ h1{
 .itd-bg-column-c_plus{
     background: #639dd5;
 }
-.itd-bg-java{
-    background: #53a4d6;
-    
-}
+
 .itd-column-bg-java{
     background: #f28618;
+}
+.itd-bg-java{
+    background: #8FB9D2;
 }
 #footer{
     background: #DF7070;
@@ -115,9 +115,21 @@ h1{
 #footer li a:hover{
     text-decoration: underline;
     color: antiquewhite;
-    
-
 }
 .itd-bg-lang{
     background: #545CA0;
+}
+.text-java{
+    color: #114a85;
+}
+
+.itd-color p{
+    color: #545CA0;
+   
+}
+.learn-btn:hover{
+    background: #95ACFD;
+    transition-duration: 0.5s;
+    color: #5560aa;
+    font-weight:bold;
 }
