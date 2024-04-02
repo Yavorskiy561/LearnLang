@@ -31,10 +31,15 @@ body{
 .about_syte{
     padding: 40px;
     border: var(--bs-border-style);
-    background: #545CA0;
+    background: url(/resourse/Frame\ 2.jpg);
+    background-size: 100%;
     color: white;
     height: 520px;
      
+}
+.about_programming{
+    background: url(/resourse/Frame\ 1.jpg);
+    background-size: 100%;
 }
 h3{
     color: #DF7070;
@@ -120,7 +125,7 @@ h1{
     background: #545CA0;
 }
 .text-java{
-    color: #114a85;
+    color: white;
 }
 
 .itd-color p{

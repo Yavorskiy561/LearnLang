@@ -1,6 +1,6 @@
 .logo_name {
   
-  background-image: linear-gradient(-225deg, #DF7070 50%, #95ACFD 50%);
+  background-image: linear-gradient(-225deg,#95ACFD 20%, #DF7070 35%, white 50%);
   background-size: 200% auto;
   background-clip: text;
   -webkit-background-clip: text;
