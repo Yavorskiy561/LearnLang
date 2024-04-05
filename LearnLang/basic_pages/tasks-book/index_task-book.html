@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <link rel="stylesheet" href="/style_pg/style-task.css">
     <script src="/js/script.js"></script>
     <link rel="stylesheet" href="/style_pg/style-animation.css">
     <link rel="stylesheet" href="/style_pg/style_index_head_page.css">
@@ -36,15 +37,15 @@
             <div class="flex-shrink-0 p-3 border-end shadows border-3" style="width: 280px;">
                 <a href="/" class="d-flex align-items-center pb-3 mb-3 link-body-emphasis text-decoration-none border-bottom border-primary-subtle">
                   <svg class="bi pe-none me-2" width="30" height="24"><use xlink:href="#bootstrap"></use></svg>
-                  <span class="fs-5 fw-semibold">Задачник по Python</span>
+                  <span class="text-center fs-5 fw-semibold">Задачник по Python</span>
                 </a>
                 <ul class="list-unstyled ps-0 ">
                   <!--Секция Начальный уровень-->
-                  <li class="mb-1">
-                    <button class="btn btn-toggle d-inline-flex align-items-center rounded border-bottom border-1 collapsed" data-bs-toggle="collapse" data-bs-target="#basic-syntax" aria-expanded="false">
+                  <li class="mb-1 border-bottom border-1">
+                    <button class="btn btn-toggle d-inline-flex align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#easy-level" aria-expanded="false">
                         Начальный уровень
                     </button>
-                    <div class="collapse" id="basic-syntax" >
+                    <div class="collapse" id="easy-level" >
                       <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small text-primary-subtle" style="background: #95ACFD; border-radius: 7px; padding: 5px;">
                         <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none text-light ms-3 rounded">Уровень 1</a></li>
                         <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none text-light ms-3 rounded">Уровень 2</a></li>
@@ -55,11 +56,11 @@
                     </div>
                   </li>
                   <!--Секция Средний уровень-->
-                  <li class="mb-1">
-                    <button class="btn btn-toggle d-inline-flex align-items-center rounded border-bottom border-1 collapsed" data-bs-toggle="collapse" data-bs-target="#basic-syntax" aria-expanded="false">
+                  <li class="mb-1 border-bottom border-1">
+                    <button class="btn btn-toggle d-inline-flex align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#avarage-level" aria-expanded="false">
                         Средний уровень
                     </button>
-                    <div class="collapse" id="basic-syntax" >
+                    <div class="collapse" id="avarage-level" >
                       <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small text-primary-subtle" style="background: #95ACFD; border-radius: 7px; padding: 5px;">
                         <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none text-light ms-3 rounded">Уровень 1</a></li>
                         <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none text-light ms-3 rounded">Уровень 2</a></li>
@@ -70,11 +71,11 @@
                     </div>
                   </li>
                   <!--Секция Профессиональный уровень-->
-                  <li class="mb-1">
-                    <button class="btn btn-toggle d-inline-flex align-items-center rounded border-bottom border-1 collapsed" data-bs-toggle="collapse" data-bs-target="#basic-syntax" aria-expanded="false">
+                  <li class="mb-1 border-bottom border-1">
+                    <button class="btn btn-toggle d-inline-flex align-items-center rounded  collapsed" data-bs-toggle="collapse" data-bs-target="#professional-level" aria-expanded="false">
                         Профессиональный уровень
                     </button>
-                    <div class="collapse" id="basic-syntax" >
+                    <div class="collapse" id="professional-level" >
                       <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small text-primary-subtle" style="background: #95ACFD; border-radius: 7px; padding: 5px;">
                         <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none text-light ms-3 rounded">Уровень 1</a></li>
                         <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none text-light ms-3 rounded">Уровень 2</a></li>
@@ -86,52 +87,61 @@
                   </li>
                 </ul>
             </div>
+
+            
+
             <section>
                 <div class="container">
                     <div class="row">
                         <div class="col-xs-12">
-                            <h1>Начальный уровень</h1>
+                            <h1 class="text-center mb-3 justify-content-center align-items-center p-3">Начальный уровень</h1>
                         </div>
                     </div>
                     <div class="row">
                       <!--Задача один-->
-                        <div class="col-xs-12">
-                            <h4 class="text-start">Уровень первый</h4>
-                            <p>Напишите программу на Python, которая выводит на экран “Привет, мир!”.</p>
-                            <button class="btn btn-toggle d-inline-flex align-items-center rounded border-bottom border-1 collapsed" data-bs-toggle="collapse" data-bs-target="#level-one-task-one" aria-expanded="false"><svg></svg></button>
-                            <div class="collapse" id="level-one-task-one">
-                                
+                        <div class="col-xs-12 border-bottom border-1">
+                            <h4 class="text-start p-1">Первый уровень</h4>
+                            <p class="ms-3">Напишите программу, которая выводит на экран “Привет, мир!”.</p>
+                            <button class="btn btn-toggle d-inline-flex align-items-center rounded border-1 collapsed" data-bs-toggle="collapse" data-bs-target="#level-one-task-one" aria-expanded="false" onclick="FlipVertical()"><div class="img-container"><img src="/resourse/arrow-down.svg" height="20"></div></button>
+                            <div class="collapse border itd-border-collapse p-2" id="level-one-task-one">
+                              <span>print</span><span>(</span><span>"Привет, мир!"</span><span>)</span>
                             </div>
                         </div>
                         <!--Задача два-->
-                        <div class="col-xs-12">
-                          <p>Напишите программу на Python, которая запрашивает у пользователя его имя и выводит приветствие, например: “Привет, [имя пользователя]!”.</p>
-                          <button class="btn btn-toggle d-inline-flex align-items-center rounded border-bottom border-1 collapsed" data-bs-toggle="collapse" data-bs-target="#level-one-task-one" aria-expanded="false"><svg></svg></button>
-                          <div class="collapse" id="level-one-task-one">
-                              
+                        <div class="col-xs-12 border-bottom border-1">
+                          <p class="ms-3">Напишите программу, которая запрашивает у пользователя его имя и выводит приветствие, например: “Привет, [имя пользователя]!”.</p>
+                          <button class="btn btn-toggle d-inline-flex align-items-center rounded border-bottom border-1 collapsed" data-bs-toggle="collapse" data-bs-target="#level-two-task-one" aria-expanded="false"><img src="/resourse/arrow-down.svg" height="20"> </button>
+                          <div class="collapse border itd-border-collapse " id="level-two-task-one">
+                            <span>name</span> = <span>input</span><span>(</span><span>"Как тебя зовут?"</spn><span>)</span>
+                            <span>print</span><span>(</span><span>"Привет, !", <span>name</span>+<span>"!"</span></span><span>)</span>
                           </div>
                       </div>
                       <!--Задача три-->
-                      <div class="col-xs-12">
-                        <p>Напишите программу на Python, которая запрашивает у пользователя два числа и складывает их.</p>
-                        <button class="btn btn-toggle d-inline-flex align-items-center rounded border-bottom border-1 collapsed" data-bs-toggle="collapse" data-bs-target="#level-one-task-one" aria-expanded="false"><svg></svg></button>
-                        <div class="collapse" id="level-one-task-one">
-                            
-                        </div>
+                      <div class="col-xs-12 border-bottom border-1">
+                        <p class="ms-3">Напишите программу, которая запрашивает у пользователя два числа и складывает их.</p>
+                        <button class="btn btn-toggle d-inline-flex align-items-center rounded border-bottom border-1 collapsed" data-bs-toggle="collapse" data-bs-target="#level-three-task-one" aria-expanded="false"><img src="/resourse/arrow-down.svg" height="20"> </button>
+                        <div class="collapse border itd-border-collapse " id="level-three-task-one">
+                          <span>num1</span> = <span>float</span><span>(</span><span>input</span><span>(</span><span></span>"Введите первое число: "<span>)</span><span>)</span>
+                          <span>num2</span> = <span>float</span><span>(</span><span>input</span><span>(</span><span></span>"Введите второе число: "<span>)</span><span>)</span>
+                          <span>result</span> = <span>num1</span> <span>+</span> <span>num2</span>
+                          <span>print</span><span>(</span><span>"Сумма двух чисел равна", <span>result</span></span><span>)</span>
+                          </div>
                     </div>
                     <!--Задача четыре-->
-                    <div class="col-xs-12">
-                      <p>Напишите программу на Python, которая запрашивает у пользователя строку и выводит ее длину.</p>
-                      <button class="btn btn-toggle d-inline-flex align-items-center rounded border-bottom border-1 collapsed" data-bs-toggle="collapse" data-bs-target="#level-one-task-one" aria-expanded="false"><svg></svg></button>
-                      <div class="collapse" id="level-one-task-one">
-                          
+                    <div class="col-xs-12 border-bottom border-1">
+                      <p class="ms-3">Напишите программу, которая запрашивает у пользователя строку и выводит ее длину.</p>
+                      <button class="btn btn-toggle d-inline-flex align-items-center rounded border-bottom border-1 collapsed" data-bs-toggle="collapse" data-bs-target="#level-four-task-one" aria-expanded="false"><img src="/resourse/arrow-down.svg" height="20"> </button>
+                      <div class="collapse border itd-border-collapse " id="level-four-task-one">
+                        <span>str</span> = <span>input</span><span>(</span><span></span>"Введите первое число: "<span>)</span>
+                        <span>print</span><span>(</span><span>"Длина строки равна", <span>len</span><span>(</span><span>str</span><span>)</span></span><span>)</span>
+
                       </div>
                     </div>
                     <!--Задача пять-->
-                    <div class="col-xs-12">
-                      <p>Напишите программу на Python, которая запрашивает у пользователя число и проверяет, четное оно или нечетное.</p>
-                      <button class="btn btn-toggle d-inline-flex align-items-center rounded border-bottom border-1 collapsed" data-bs-toggle="collapse" data-bs-target="#level-one-task-one" aria-expanded="false"><svg></svg></button>
-                      <div class="collapse" id="level-one-task-one">
+                    <div class="col-xs-12 border-bottom border-1">
+                      <p class="ms-3">Напишите программу, которая запрашивает у пользователя число и проверяет, четное оно или нечетное.</p>
+                      <button class="btn btn-toggle d-inline-flex align-items-center rounded border-bottom border-1 collapsed" data-bs-toggle="collapse" data-bs-target="#level-five-task-one" aria-expanded="false"><img src="/resourse/arrow-down.svg" height="20"> </button>
+                      <div class="collapse border itd-border-collapse bg-secondary" id="level-five-task-one">
                           
                       </div>
                   </div>
@@ -139,9 +149,8 @@
                 </div>
             </section>
         </div>
-
         <!--Footer главной страницы-->
-        <footer class="d-flex flex-wrap  justify-content-center align-items-center p-4 border-top" id="footer">
+        <footer class="d-flex flex-wrap justify-content-center align-items-center p-4" id="footer">
             <p class="col-md-4 mb-0 text-light">© 2024 Company, Inc</p>
         
             <a href="/" class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
