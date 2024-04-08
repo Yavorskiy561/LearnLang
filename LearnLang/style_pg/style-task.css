@@ -8,14 +8,6 @@ body, html{
     overflow: hidden;
   }
   
-.image-container img {
-    width: 20px;
-    height: 20px;
-    transition: transform 1s ease-in-out;
-  }
-.flip-vertical {
-    transform: scaleY(-1);
-  }
 .row h2{
   color: #95ACFD;
 }
