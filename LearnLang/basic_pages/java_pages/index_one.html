@@ -23,7 +23,6 @@
             <h1 class="logo_name">LearnLang</h1>
           </a>
           <ul class="nav itd-nav nav-pills">
-            <li class="nav-item"><a href="#" class="nav-link" aria-current="page" id="link_python">Python</a></li>
             <li class="nav-item"><a href="/basic_pages/index-install-po.html" class="nav-link" id="link_python">Установка ПО</a></li>
             <li class="nav-item"><a href="/basic_pages/python_pages/index_one.html" class="nav-link" id="link_python">Python</a></li>
             <li class="nav-item"><a href="/basic_pages/c_pages/index_one.html" class="nav-link" id="link_c">C</a></li>
@@ -40,10 +39,9 @@
 
             <!--Боковая панель-->
               <div class="flex-shrink-0 p-3 border-end shadows border-3" style="width: 280px;">
-                <a href="/" class="d-flex align-items-center pb-3 mb-3 link-body-emphasis text-decoration-none border-bottom border-primary-subtle">
-                  <svg class="bi pe-none me-2" width="30" height="24"><use xlink:href="#bootstrap"></use></svg>
-                  <span class="fs-5 fw-semibold">Раздел Java</span>
-                </a>
+                <div class="d-flex align-items-center justify-content-center pb-3 mb-2 border-bottom border-danger-subtle">
+                  <span class="text-center fs-5 fw-semibold">Раздел по Java</span>
+                </div>
                 <ul class="list-unstyled ps-0 ">
                   <!--Секция базовый синтаксис-->
                   <li class="mb-1 border-bottom border-1">
@@ -344,8 +342,8 @@
                   <div class="col-xs-12 border-danger-subtle border border-3 ms-3 rounded p-3 mb-4">
                     <div class="border-start border-primary-subtle border-2">
                       <div class="ms-2">
-                        <span>bool</span><span> isTrue =</span><span> true</span><span>;</span><br>
-                        <span>bool</span><span> isTrue =</span><span> false</span><span>;</span>
+                        <span style="color: #0000FF;">bool</span> isTrue =<span style="color: rgb(80, 10, 80);"> true</span>;<br>
+                        <span style="color: #0000FF;">bool</span> isTrue =<span style="color: rgb(80, 10, 80);"> false</span>;
                       </div>
                     </div>
                   </div>
@@ -359,7 +357,7 @@
                   <div class="col-xs-12 border-danger-subtle border ms-3 border-3 rounded p-3 mb-4">
                     <div class="border-start border-primary-subtle border-2">
                       <div class="ms-2">
-                       <span>final</span> <span>float</span> <span>pi = </span><span>3.14159<span>;</span>
+                       <span  style="color: #0000FF;">final</span> <span style="color: #0000FF;">float</span> pi = <span style="color: #008000;">3.14159;
                       </div>
                     </div>
                   </div>
@@ -373,7 +371,7 @@
                   <div class="col-xs-12 border-danger-subtle border ms-3 border-3 rounded p-3 mb-4">
                     <div class="border-start border-primary-subtle border-2">
                       <div class="ms-2">
-                        <span>int[]</span> <span>name = </span><span>{<span>1, 2, 3, 4, 5</span><span>}</span><span>;</span>
+                        <span style="color: #0000FF;">int[]</span> name = {<span style="color: #008000;">1, 2, 3, 4, 5</span>};
                       </div>
                     </div>
                   </div>
@@ -388,17 +386,17 @@
                   <div class="col-xs-12 border-danger-subtle border ms-3 border-3 rounded p-3 mb-4">
                     <div class="border-start border-primary-subtle border-2">
                       <div class="ms-2">
-                        <span>class</span> <span>Person</span> <span>{</span> <br>
+                        <span style="color: #0000FF;">class</span> <span>Person</span> <span>{</span> <br>
                           <div class="p-2 ps-3">
-                            <span>String</span> <span>name</span><span>;</span><br>
-                            <span>int</span> <span>age</span><span>;</span><br> 
+                            <span style="color: #0000FF;">String</span> <span>name</span><span>;</span><br>
+                            <span style="color: #0000FF;">int</span> <span>age</span><span>;</span><br> 
                           </div>
                           <span>}</span><br>
-                          <span>public static void</span> <span>main</span><span>(</span><span>String[] args</span><span>)</span> <span>{</span> <br>
+                          <span style="color: #0000FF;">public static void</span> <span>main</span><span>(</span><span>String[] args</span><span>)</span> <span>{</span> <br>
                             <div class="p-2 ps-3">
-                              <span>Person</span> <span>person =</span> <span>new</span> <span>Person</span><span>()</span><span>;</span><br>
-                              <span>person.<span>name</span></span> <span>=</span> <span>"John"</span><span>;</span><br> 
-                              <span>person.</span> <span>age</span><span>25</span><span>;</span><br> 
+                              <span style="color: #0000FF;">Person</span> person = <span style="color: #0000FF;">new</span> <span>Person</span>();<br>
+                              <span style="color: rgb(133, 70, 47);">person.</span>name = <span style="color: #FF0000;">"John"</span>;<br> 
+                              <span style="color: rgb(133, 70, 47);">person.</span> age = <span style="color: #008000;">25</span>;<br> 
                             </div>
                           <span>}</span>
                       </div>
@@ -413,8 +411,8 @@
                   <div class="col-xs-12 border-danger-subtle border ms-3 border-3 rounded p-3 mb-4">
                     <div class="border-start border-primary-subtle border-2">
                       <div class="ms-2">
-                        <span>Integer</span> <span>number = </span><span>10</span><span>;</span><br>
-                        <span>Double</span> <span>pi = </span><span>3.14159</span><span>;</span>
+                        <span style="color: #0000FF;">Integer</span> number = <span style="color: #008000;">10</span>;<br>
+                        <span style="color: #0000FF;">Double</span> pi = <span style="color: #008000;">3.14159</span>;
                       </div>
                     </div>
                   </div>
