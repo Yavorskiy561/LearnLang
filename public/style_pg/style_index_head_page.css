@@ -31,14 +31,14 @@ body{
 .about_syte{
     padding: 40px;
     border: var(--bs-border-style);
-    background: url(/LearnLang/resourse/Frame\ 2.jpg);
+    background: url(/resourse/Frame\ 2.jpg);
     background-size: 100%;
     color: white;
     height: 520px;
      
 }
 .about_programming{
-    background: url(/LearnLang/resourse/Frame\ 1.jpg);
+    background: url(/resourse/Frame\ 1.jpg);
     background-size: 100%;
 }
 h3{
@@ -139,7 +139,7 @@ h1{
     font-weight:bold;
 }
 .itd-bg-install-po{
-    background: url(/LearnLang/resourse/Frame\ 1.jpg);
+    background: url(/resourse/Frame\ 1.jpg);
     background-size: 100%;
 }
 .itd-title-po{

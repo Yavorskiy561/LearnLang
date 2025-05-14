@@ -1,14 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <link rel="stylesheet" href="/LearnLang/style_pg/style-python-one.css">
-  <link rel="stylesheet" href="/LearnLang/style_pg/style-animation.css">
-  <link rel="stylesheet" href="/LearnLang/style_pg/style_index_head_page.css">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-  <link rel="stylesheet" href="/LearnLang/style_pg/style_index_head_page.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script>
+  
+  <!--Стили-->  
+  <link rel="stylesheet" href="/style_pg/style-animation.css">
+  <link rel="stylesheet" href="/style_pg/style_index_head_page.css">
+  <link rel="stylesheet" href="/style_pg/style_index_head_page.css">
+  
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="shortcut icon" href="/LearnLang/resourse/logo.svg" height="10" type="image/x-icon">
+  <link rel="shortcut icon" href="/resourse/logo.svg" height="10" type="image/x-icon">
   <title>learnlang</title>
 </head>
 <body class="w-100% h-100%"> 
@@ -18,20 +21,20 @@
 
         <!--Header главной страницы-->
         <header class="d-flex flex-wrap justify-content-center py-3 border-bottom itd-bg-header" id="header">
-          <a href="/LearnLang/index.html" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
-            <img src="/LearnLang/resourse/logo.svg" height="60"  alt="Логотип">
+          <a href="index.php" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
+            <img src="resourse/logo.svg" height="60"  alt="Логотип">
             <h1 class="logo_name">LearnLang</h1>
           </a>
           <ul class="nav itd-nav nav-pills">
-            <li class="nav-item"><a href="/LearnLang/index-install-po.html" class="nav-link" id="link_python">Установка ПО</a></li>
-            <li class="nav-item"><a href="/LearnLang/index_one_python.html" class="nav-link" id="link_python">Python</a></li>
-            <li class="nav-item"><a href="/LearnLang/index_one_c.html" class="nav-link" id="link_c">C</a></li>
-            <li class="nav-item"><a href="/LearnLang/index_one_c++.html" class="nav-link" id="link_c_plus_plus">C++</a></li>
-            <li class="nav-item"><a href="/LearnLang/index_one_java.html" class="nav-link" id="link_java">Java</a></li>
-            <li class="nav-item"><a href="/LearnLang/index-task-python.html" class="nav-link" id="link_tasks_python">Задачник по Python</a></li>
-            <li class="nav-item"><a href="/LearnLang/index-task-c.html" class="nav-link" id="link_tasks_C">Задачник по C</a></li>
-            <li class="nav-item"><a href="/LearnLang/index-task-c++.html" class="nav-link" id="link_tasks_C++">Задачник по C++</a></li>
-            <li class="nav-item"><a href="/LearnLang/index-task-java.html" class="nav-link" id="link_tasks_java">Задачник по Java</a></li>
+            <li class="nav-item"><a href="index-install-po.php" class="nav-link" id="link_python">Установка ПО</a></li>
+            <li class="nav-item"><a href="index_one_python.php" class="nav-link" id="link_python">Python</a></li>
+            <li class="nav-item"><a href="index_one_c.php" class="nav-link" id="link_c">C</a></li>
+            <li class="nav-item"><a href="index_one_c++.php" class="nav-link" id="link_c_plus_plus">C++</a></li>
+            <li class="nav-item"><a href="index_one_java.php" class="nav-link" id="link_java">Java</a></li>
+            <li class="nav-item"><a href="index-task-python.php" class="nav-link" id="link_tasks_python">Задачник по Python</a></li>
+            <li class="nav-item"><a href="index-task-c.php" class="nav-link" id="link_tasks_C">Задачник по C</a></li>
+            <li class="nav-item"><a href="index-task-c++.php" class="nav-link" id="link_tasks_C++">Задачник по C++</a></li>
+            <li class="nav-item"><a href="index-task-java.php" class="nav-link" id="link_tasks_java">Задачник по Java</a></li>
           </ul>
       </header>
 
@@ -40,7 +43,7 @@
             <!--Боковая панель-->
               <div class="flex-shrink-0 p-3 border-end shadows border-3" style="width: 280px;">
                 <div class="d-flex align-items-center justify-content-center pb-3 mb-2 border-bottom border-danger-subtle">
-                  <span class="text-center fs-5 fw-semibold">Раздел по Java</span>
+                  <span class="text-center fs-5 fw-semibold">Задачник по С++</span>
                 </div>
                 <ul class="list-unstyled ps-0 ">
                   <!--Секция базовый синтаксис-->
@@ -72,111 +75,106 @@
                       </ul>
                     </div>
                   </li>
-                  <!--Секция Интерфейсы и абстрактные классы-->
+                  <!--Секция Указатели и динамическая память-->
                   <li class="mb-1 border-bottom border-1">
                     <button class="btn btn-toggle text-start d-inline-flex align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#modals-library" aria-expanded="false">
-                      Интерфейсы и абстрактные классы
+                      Указатели и динамическая память
                     </button>
                     <div class="collapse" id="modals-library" >
                       <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small" style="background: #95ACFD; border-radius: 7px; padding: 5px;">
-                        <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none text-light ms-3 rounded">Определение интерфейсов и абстрактных классов</a></li>
-                        <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none text-light ms-3 rounded">Реализация интерфейсов и абстрактных классов</a></li>
-                        <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none text-light ms-3 rounded">Использование интерфейсов и абстрактных классов в коде</a></li>
+                        <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none text-light ms-3 rounded">Указатели и их использование</a></li>
+                        <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none text-light ms-3 rounded">Динамическая память</a></li>
+                        <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none text-light ms-3 rounded">Указатели на функции</a></li>
                       </ul>
                     </div>
                   </li>
-                  <!--Секция Коллекции и массивы-->
+                  <!--Секция Массивы и строки-->
                   <li class="mb-1 border-bottom border-1">
                     <button class="btn btn-toggle d-inline-flex align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#work-file-direct" aria-expanded="false">
-                      Коллекции и массивы
+                      Массивы и строки
                     </button>
                     <div class="collapse" id="work-file-direct" style="background: #95ACFD; border-radius: 7px; padding: 5px;">
                       <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                        <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none text-light ms-3 rounded">Коллекции</a></li>
-                        <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none text-light ms-3 rounded">Массивы</a></li>
-                        <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none text-light ms-3 rounded">Работа с коллекциями и массивами</a></li>
+                        <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none text-light ms-3 rounded">Массивы и их использование</a></li>
+                        <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none text-light ms-3 rounded">Строки и их использование</a></li>
+                        <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none text-light ms-3 rounded">Функции для работы со строками</a></li>
                       </ul>
                     </div>
                   </li>
-                  <!--Секция Исключения и обработка ошибок-->
+                  <!--Секция Структуры и объединения-->
                   <li class="mb-1 border-bottom border-1">
-                    <button class="btn btn-toggle text-start d-inline-flex align-items-center roundedcollapsed" data-bs-toggle="collapse" data-bs-target="#work-date" aria-expanded="false">
-                      Исключения и обработка ошибок
+                    <button class="btn btn-toggle d-inline-flex align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#work-date" aria-expanded="false">
+                      Структуры и объединения
                     </button>
                     <div class="collapse" id="work-date">
                       <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small" style="background: #95ACFD; border-radius: 7px; padding: 5px;">
-                        <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none ms-3 text-light rounded">Определение исключений и их использование</a></li>
-                        <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none ms-3 text-light rounded">Обработка исключений</a></li>
-                        <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none ms-3 text-light rounded">Использование исключений в коде</a></li>
+                        <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none ms-3 text-light rounded">Структуры и их использование</a></li>
+                        <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none ms-3 text-light rounded">Объединения и их использование</a></li>
+                        <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none ms-3 text-light rounded">Функции для работы со структурами и объединениями</a></li>
                       </ul>
                     </div>
                   </li>
-                  <!--Секция Многопоточность-->
+                  <!--Секция Файлы-->
                   <li class="mb-1 border-bottom border-1">
                     <button class="btn btn-toggle d-inline-flex align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#work-WEB" aria-expanded="false">
-                      Многопоточность
+                      Файлы
                     </button>
                     <div class="collapse" id="work-WEB">
                       <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small" style="background: #95ACFD; border-radius: 7px; padding: 5px;">
-                        <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none text-light ms-3 rounded">Определение потоков и процессов</a></li>
-                        <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none text-light ms-3 rounded">Создание и управление потоками</a></li>
-                        <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none text-light ms-3 rounded">Синхронизация потоков</a></li>
+                        <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none text-light ms-3 rounded">Работа с файлами</a></li>
+                        <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none text-light ms-3 rounded">Функции для работы с файлами</a></li>
                       </ul>
                     </div>
                   </li>
-                  <!--Секция Сериализация и десериализация-->
+                  <!--Секция Ввод и вывод-->
                   <li class="mb-1 border-bottom border-1">
-                    <button class="btn btn-toggle text-start d-inline-flex align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#work-datebase" aria-expanded="false">
-                      Сериализация и десериализация
+                    <button class="btn btn-toggle d-inline-flex align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#work-datebase" aria-expanded="false">
+                      Ввод и вывод
                     </button>
                     <div class="collapse" id="work-datebase">
                       <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small" style="background: #95ACFD; border-radius: 7px; padding: 5px;">
-                        <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none ms-3 text-light rounded">Определение сериализации и десериализации</a></li>
-                        <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none ms-3 text-light rounded">Сериализация и десериализация объектов</a></li>
-                        <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none ms-3 text-light rounded">Использование сериализации и десериализации в коде</a></li>
+                        <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none ms-3 text-light rounded">Функции для ввода и вывода</a></li>
+                        <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none ms-3 text-light rounded">Функции для работы с консолью</a></li>
                       </ul>
                     </div>
                   </li>
-                  <!--Секция Работа с файлами-->
+                  <!--Секция Препроцессор и макросы-->
                   <li class="mb-1 border-bottom border-1">
                     <button class="btn btn-toggle d-inline-flex align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#work-machine-learning" aria-expanded="false">
-                      Работа с файлами
+                      Препроцессор и макросы
                     </button>
                     <div class="collapse" id="work-machine-learning">
                       <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small" style="background: #95ACFD; border-radius: 7px; padding: 5px;">
-                        <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none text-light ms-3 rounded">Работа с файлами</a></li>
-                        <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none text-light ms-3 rounded">Чтение и запись в файлы</a></li>
-                        <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none text-light ms-3 rounded">Работа с буферами ввода-вывода</a></li>
+                        <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none text-light ms-3 rounded">Препроцессор и его использование</a></li>
+                        <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none text-light ms-3 rounded">Макросы и их использование</a></li>
                       </ul>
                     </div>
                   </li>
-                  <!--Секция Работа с сетью-->
+                  <!--Секция Библиотеки и стандартные функции-->
                   <li class="mb-1 border-bottom border-1">
-                    <button class="btn btn-toggle d-inline-flex align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#work-scientist-calculate" aria-expanded="false">
-                      Работа с сетью
+                    <button class="btn btn-toggle text-start d-inline-flex align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#work-scientist-calculate" aria-expanded="false">
+                      Библиотеки и <br>
+                      стандартные функции
                     </button>
                     <div class="collapse" id="work-scientist-calculate">
                       <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small" style="background: #95ACFD; border-radius: 7px; padding: 5px;">
-                        <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none text-light ms-3 rounded">Определение сетевых протоколов</a></li>
-                        <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none text-light ms-3 rounded">Работа с сокетами</a></li>
-                        <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none text-light ms-3 rounded">Работа с HTTP-запросами и ответами</a></li>
+                        <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none text-light ms-3 rounded">Стандартные функции языка</a></li>
+                        <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none text-light ms-3 rounded">Библиотеки</a></li>
                       </ul>
                     </div>
                   </li>
-                  <!--Секция Работа с базами данных-->
-                  <li class="mb-1 border-bottom border-1">
-                    <button class="btn btn-toggle d-inline-flex align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#work-machine-learning" aria-expanded="false">
-                      Работа с базами данных
-                    </button>
-                    <div class="collapse" id="work-machine-learning">
-                      <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small" style="background: #95ACFD; border-radius: 7px; padding: 5px;">
-                        <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none text-light ms-3 rounded">Определение баз данных и их типов</a></li>
-                        <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none text-light ms-3 rounded">Работа с JDBC и драйверами баз данных</a></li>
-                        <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none text-light ms-3 rounded">Создание и управление базами данных</a></li>
-                      </ul>
-                    </div>
-                  </li>
-                  
+                    <!--Секция Проектирование и архитектура программ-->
+                    <li class="mb-1 border-bottom border-1">
+                      <button class="btn btn-toggle d-inline-flex align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#work-machine-learning" aria-expanded="false">
+                        Обработка ошибок
+                      </button>
+                      <div class="collapse" id="work-machine-learning">
+                        <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small" style="background: #95ACFD; border-radius: 7px; padding: 5px;">
+                          <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none text-light ms-3 rounded">Обработка ошибок в C++</a></li>
+                          <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none text-light ms-3 rounded">Функции для обработки ошибок</a></li>
+                        </ul>
+                      </div>
+                    </li>
                 </ul>
               </div>
            
@@ -184,19 +182,19 @@
            <!--Переменные-->
            <section class="w-100% h-100%">
             <div class="container">
-                <div class="row">
-                  <div class="col-xs-12 mb-3" style="background: #DF7070;">
-                    <h1 class="text-center mb-3 justify-content-center align-items-center text-light p-2" >Учебник по Программированию</h1>
-                  </div>
+              <div class="row">
+                <div class="col-xs-12 mb-3" style="background: #DF7070;">
+                  <h1 class="text-center mb-3 justify-content-center align-items-center text-light p-2">Учебник по Программированию</h1>
                 </div>
-                <div class="row">
-                  <div class="col-xs-12">
-                    <p class="fs-4 mb-3">
-                      Этот учебник предназначен для тех, кто хочет овладеть основами программирования и приобрести навыки, необходимые для создания программного обеспечения. Независимо от вашего уровня знаний, будь то абсолютный новичок или человек с небольшим опытом, этот учебник предложит вам курс, начиная с основных концепций и заканчивая практическими проектами.
-                      Перед изучением материала рекомендуем посетить страницу <a href="/LearnLang/index-install-po.html" >Установка ПО</a>, где подробно описанно установка программного обеспечения.
-                    </p>
-                  </div>
+              </div>
+              <div class="row">
+                <div class="col-xs-12">
+                  <p class="fs-4 mb-3">
+                    Этот учебник предназначен для тех, кто хочет овладеть основами программирования и приобрести навыки, необходимые для создания программного обеспечения. Независимо от вашего уровня знаний, будь то абсолютный новичок или человек с небольшим опытом, этот учебник предложит вам курс, начиная с основных концепций и заканчивая практическими проектами.
+                    Перед изучением материала рекомендуем посетить страницу <a href="index-install-po.php" >Установка ПО</a>, где подробно описанно установка программного обеспечения.
+                  </p>
                 </div>
+              </div>
               <div class="row" >
                 <div class="col-xs-12 mb-3" style="background: #DF7070;">
                   <h1 class="text-center mb-2 p-2 justify-content-center m-auto text-light">
@@ -214,7 +212,7 @@
                 <div class="col-xs-12  border border-danger-subtle border-primary border-3 ms-3 rounded p-3 mb-3">
                   <div class="border-start border-primary-subtle border-2 ">
                     <div class="ms-2 mb">
-                      <span style="color: #0000FF;">int</span> x = <span  style="color: #008000;">5</span><br>
+                      <span style="color: #0000FF;">int</span> x = <span style="color: #008000;">5</span><br>
                     </div>
                   </div>
                 </div>
@@ -239,7 +237,7 @@
                   <p class="fs-5">
                     Типы данных определяют вид данных, которые может содержать переменная. В C существует несколько основных типов данных, которые можно использовать для объявления переменных. Рассмотрим каждый тип данных подробнее.
                   </p>
-                  <h4>Целочисленные типы данных</h4>
+                  <h3>Целочисленные типы данных</h3>
                   <p class="ms-3 fs-5">int: используется для хранения целых чисел. Занимает обычно 4 байта.<br>
                     Пример:</p>
                 </div>
@@ -279,7 +277,7 @@
                 </div>
                   <!--Вещественные типы данных-->
                  <div class="col-xs-12 mb-1">
-                  <h4>Вещественные типы данных</h4>
+                  <h3>Вещественные типы данных</h3>
                   <p class="ms-3 fs-5">float: используется для хранения чисел с плавающей точкой одинарной точности. Занимает обычно 4 байта.<br>
                     Пример:</p>
                 </div>
@@ -293,48 +291,48 @@
                 </div>
                   <!--Double-->
                   <div class="col-xs-12 mb-1">
-                    <p class="ms-3 fs-5 ">double: используется для хранения чисел с плавающей точкой двойной точности. Занимает обычно 8 байт.<br>
+                    <p class="ms-3 fs-5">double: используется для хранения чисел с плавающей точкой двойной точности. Занимает обычно 8 байт.<br>
                       Пример:</p>
                   </div>
                   <!--Пример-->
                   <div class="col-xs-12 border-danger-subtle border border-3 ms-3  rounded p-3 mb-4">
                     <div class="border-start border-primary-subtle border-2">
                       <div class="ms-2">
-                        <span style="color: #0000FF;">long</span> population = <span style="color: #008000;">7894561230</span>;
+                        <span style="color: #0000FF;">double</span> gravity = <span style="color: #008000;">9.8</span>;
                       </div>
                     </div>
                   </div>
                   <!--Символьный тип данных-->
                  <div class="col-xs-12 mb-1">
-                  <h4>Символьный тип данных</h4>
-                  <p class="ms-3 fs-5">char: используется для хранения символов. Занимает 2 байта и представляет символ в кодировке Unicode.<br>
+                  <h3>Символьный тип данных</h3>
+                  <p class="ms-3 fs-5">char: используется для хранения символов. Занимает 1 байт.<br>
                     Пример:</p>
                 </div>
                 <!--Пример-->
                 <div class="col-xs-12 border-danger-subtle border border-3 ms-3  rounded p-3 mb-4">
                   <div class="border-start border-primary-subtle border-2">
                     <div class="ms-2">
-                      <span style="color: #0000FF;">char</span> grade = <span style="color: #008000;">'A'</span>;
+                      <span style="color: #0000FF;">char</span> grade = <span style="color: #FF0000;">'A'</span>;
                     </div>
                   </div>
                 </div>
                   <!--Строки-->
                   <div class="col-xs-12 ms-2">
-                    <h4 >Строки</h4>
-                    <p class="fs-5">String: используется для хранения текстовых строк. <br>
+                    <h3>Строки</h3>
+                    <p class="fs-5">Строки представляют последовательность символов и обозначаются с помощью двойных "" кавычек. Для объявление нужно прописать std:: <br>
                     Пример</p>
                   </div>
                   <!--Пример-->
                   <div class="col-xs-12 border-danger-subtle border border-3 ms-3 rounded p-3 mb-4">
                     <div class="border-start border-primary-subtle border-2">
                       <div class="ms-2">
-                        <span style="color: #0000FF;">String</span> grade = <span style="color: #FF0000;">'John'</span>;
+                        <span style="color: #0000FF;">std :: </span><span style="color: rgb(80, 10, 80);">string</span> grade[] = <span style="color: #FF0000;">'John'</span>;
                       </div>
                     </div>
                   </div>
                   <!--Логический тип данных-->
                   <div class="col-xs-12 ms-2">
-                    <h4>Логический тип данных:</h4>
+                    <h3>Логический тип данных:</h3>
                     <p class="fs-5">bool: в C нет встроенного типа bool, но его можно эмулировать с помощью int или char. Обычно используется 0 для false и любое ненулевое значение для true. <br>
                     Пример:</p>
                   </div>
@@ -342,28 +340,28 @@
                   <div class="col-xs-12 border-danger-subtle border border-3 ms-3 rounded p-3 mb-4">
                     <div class="border-start border-primary-subtle border-2">
                       <div class="ms-2">
-                        <span style="color: #0000FF;">bool</span> isTrue =<span style="color: rgb(80, 10, 80);"> true</span>;<br>
-                        <span style="color: #0000FF;">bool</span> isTrue =<span style="color: rgb(80, 10, 80);"> false</span>;
+                        <span style="color: #0000FF;">bool</span> isTrue = <span style="color: rgb(80, 10, 80);">true</span>;<br>
+                        <span style="color: #0000FF;">bool</span> isTrue = <span style="color: rgb(80, 10, 80);">false</span>;
                       </div>
                     </div>
                   </div>
                   <!--Константы-->
                   <div class="col-xs-12 ms-2">
-                    <h4>Константы</h4>
-                    <p class="fs-5">final: используется для объявления переменных, значения которых не могут быть изменены. <br>
+                    <h3>Константы</h3>
+                    <p class="fs-5">const: используется для объявления переменных, значения которых не могут быть изменены. <br>
                     Пример:</p>
                   </div>
                   <!--Пример-->
                   <div class="col-xs-12 border-danger-subtle border ms-3 border-3 rounded p-3 mb-4">
                     <div class="border-start border-primary-subtle border-2">
                       <div class="ms-2">
-                       <span  style="color: #0000FF;">final</span> <span style="color: #0000FF;">float</span> pi = <span style="color: #008000;">3.14159;
+                       <span style="color: #0000FF;">const</span> <span style="color: rgb(80, 10, 80);">float</span> pi = <span style="color: #008000;">3.14159</span>;
                       </div>
                     </div>
                   </div>
                   <!--Массивы-->
                   <div class="col-xs-12 ms-2">
-                    <h4>Массивы</h4>
+                    <h3>Массивы</h3>
                     <p class="fs-5">Тип [количество символов]: массив - это набор данных одного типа<br>
                       Пример:</p>
                   </div>
@@ -371,48 +369,37 @@
                   <div class="col-xs-12 border-danger-subtle border ms-3 border-3 rounded p-3 mb-4">
                     <div class="border-start border-primary-subtle border-2">
                       <div class="ms-2">
-                        <span style="color: #0000FF;">int[]</span> name = {<span style="color: #008000;">1, 2, 3, 4, 5</span>};
+                        <span style="color: #0000FF;">char</span> name[<span style="color: #008000;">5</span>] = {<span style="color: #008000;">1, 2, 3, 4, 5</span>};
                       </div>
                     </div>
                   </div>
-                  
-                   <!--Объектные типы данных-->
-                   <div class="col-xs-12 ms-2">
-                    <h4>Объектные типы данных</h4>
-                    <p class="fs-5">Классы: в Java также можно создавать пользовательские типы данных с помощью классов. Классы позволяют определить состояние и поведение объектов.<br>
-                      Пример:</p>
-                  </div>
-                  <!--Пример-->
-                  <div class="col-xs-12 border-danger-subtle border ms-3 border-3 rounded p-3 mb-4">
-                    <div class="border-start border-primary-subtle border-2">
-                      <div class="ms-2">
-                        <span style="color: #0000FF;">class</span> <span>Person</span> <span>{</span> <br>
-                          <div class="p-2 ps-3">
-                            <span style="color: #0000FF;">String</span> <span>name</span><span>;</span><br>
-                            <span style="color: #0000FF;">int</span> <span>age</span><span>;</span><br> 
-                          </div>
-                          <span>}</span><br>
-                          <span style="color: #0000FF;">public static void</span> <span>main</span><span>(</span><span>String[] args</span><span>)</span> <span>{</span> <br>
-                            <div class="p-2 ps-3">
-                              <span style="color: #0000FF;">Person</span> person = <span style="color: #0000FF;">new</span> <span>Person</span>();<br>
-                              <span style="color: rgb(133, 70, 47);">person.</span>name = <span style="color: #FF0000;">"John"</span>;<br> 
-                              <span style="color: rgb(133, 70, 47);">person.</span> age = <span style="color: #008000;">25</span>;<br> 
-                            </div>
-                          <span>}</span>
-                      </div>
-                    </div>
-                  </div>
-                  <!--Классы оболочки-->
+                  <!--Модификаторы типов данных-->
                   <div class="col-xs-12 ms-2">
-                    <p class="fs-5">Классы-оболочки: Java также предоставляет классы-оболочки для каждого примитивного типа данных. Например, Integer для типа int, Double для типа double и т.д. Классы-оболочки позволяют работать с примитивными типами данных как с объектами.<br>
+                    <h3>Модификаторы типов данных</h3>
+                    <p class="fs-5">signed и unsigned: используются для указания диапазона чисел.<br>
                       Пример:</p>
                   </div>
                   <!--Пример-->
                   <div class="col-xs-12 border-danger-subtle border ms-3 border-3 rounded p-3 mb-4">
                     <div class="border-start border-primary-subtle border-2">
                       <div class="ms-2">
-                        <span style="color: #0000FF;">Integer</span> number = <span style="color: #008000;">10</span>;<br>
-                        <span style="color: #0000FF;">Double</span> pi = <span style="color: #008000;">3.14159</span>;
+                        <span style="color: #0000FF;">signet </span><span style="color: rgb(80, 10, 80);">int</span> temperature = <span style="color: #008000;">-10</span>;<br>
+                        <span style="color: #0000FF;">unsignet </span><span style="color: rgb(80, 10, 80);">int</span> count = <span style="color: #008000;">100</span>;
+                      </div>
+                    </div>
+                  </div>
+                  <!--Указатели-->
+                  <div class="col-xs-12 ms-2">
+                    <h3>Указатели</h3>
+                    <p class="fs-5">Указатель — переменная, диапазон значений которой состоит из адресов ячеек памяти или специального значения — нулевого адреса. Тип *ptr: объявление указателя на целое число.<br>
+                      Пример:</p>
+                  </div>
+                  <!--Пример-->
+                  <div class="col-xs-12 border-danger-subtle border ms-3 border-3 rounded p-3 mb-4">
+                    <div class="border-start border-primary-subtle border-2">
+                      <div class="ms-2">
+                        <span style="color: #0000FF;">int</span> number = <span>10<span>;</span><br>
+                        <span style="color: #0000FF;">int</span> <span style="color: rgb(80, 10, 80);">*ptr = </span> <span style="color: rgb(133, 70, 47);">&number</span>; <span style="color: #808080;">//присваивание указателю адреса переменной</span>
                       </div>
                     </div>
                   </div>
@@ -428,21 +415,21 @@
             <div class="container">
               <div class="row">
                 <div class="col">
-                  <li class="nav-item"><a href="/LearnLang/index-install-po.html" class="nav-link px-2 text-light">Установка ПО</a></li>
-                  <li class="nav-item"><a href="/LearnLang/index_one_python.html" class="nav-link px-2 text-light">Python</a></li>
+                  <li class="nav-item"><a href="index-install-po.php" class="nav-link px-2 text-light">Установка ПО</a></li>
+                  <li class="nav-item"><a href="index_one_python.php" class="nav-link px-2 text-light">Python</a></li>
                 </div>
             
                 <div class="col">
-                  <li class="nav-item"><a href="/LearnLang/index_one_c.html" class="nav-link px-2 text-light">C</a></li>
-                  <li class="nav-item"><a href="/LearnLang/index_one_c++.html" class="nav-link px-2 text-light">C++</a></li>
+                  <li class="nav-item"><a href="index_one_c.php" class="nav-link px-2 text-light">C</a></li>
+                  <li class="nav-item"><a href="index_one_c++.php" class="nav-link px-2 text-light">C++</a></li>
                 </div>
                 <div class="col">
-                  <li class="nav-item"><a href="/LearnLang/index-task-python.html" class="nav-link px-2 text-light">Задачник по Python</a></li>
-                  <li class="nav-item"><a href="/LearnLang/index-task-c.html" class="nav-link px-2 text-light">Задачник по C</a></li>
+                  <li class="nav-item"><a href="index-task-python.php" class="nav-link px-2 text-light">Задачник по Python</a></li>
+                  <li class="nav-item"><a href="index-task-c.php" class="nav-link px-2 text-light">Задачник по C</a></li>
                 </div>
                 <div class="col">
-                  <li class="nav-item"><a href="/LearnLang/index-task-c++.html" class="nav-link px-2 text-light">Задачник по C++</a></li>
-                  <li class="nav-item"><a href="/LearnLang/index-task-java.html" class="nav-link px-2 text-light">Задачник по Java</a></li>
+                  <li class="nav-item"><a href="index-task-c++.php" class="nav-link px-2 text-light">Задачник по C++</a></li>
+                  <li class="nav-item"><a href="index-task-java.php" class="nav-link px-2 text-light">Задачник по Java</a></li>
                 </div>
               </div>
             </div>
@@ -450,6 +437,5 @@
         </footer>
       </div>
   </div>
-    
 </body>
 </html>

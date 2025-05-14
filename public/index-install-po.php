@@ -1,45 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="/LearnLang/style_pg/style-animation.css">
-    <link rel="stylesheet" href="/LearnLang/style_pg/style_index_head_page.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link rel="stylesheet" href="/LearnLang/style_pg/style_index_head_page.css">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="/LearnLang/resourse/logo.svg" height="10" type="image/x-icon">
-    <title>learnlang</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script>
+  
+  <!--Стили-->  
+  <link rel="stylesheet" href="/style_pg/style-animation.css">
+  <link rel="stylesheet" href="/style_pg/style_index_head_page.css">
+  <link rel="stylesheet" href="/style_pg/style_index_head_page.css">
+  
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="/resourse/logo.svg" height="10" type="image/x-icon">
+  <title>learnlang</title>
 </head>
 <body>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <!--Главная страница-->
     <div class="wrapper">
         <!--Header главной страницы-->
         <header class="d-flex flex-wrap justify-content-center py-3 border-bottom itd-bg-header" id="header">
-            <a href="/LearnLang/index.html" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
-              <img src="/LearnLang/resourse/logo.svg" height="60"  alt="Логотип">
+            <a href="index.php" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
+              <img src="resourse/logo.svg" height="60"  alt="Логотип">
               <h1 class="logo_name">LearnLang</h1>
             </a>
             <ul class="nav itd-nav nav-pills">
-              <li class="nav-item"><a href="/LearnLang/index-install-po.html" class="nav-link" id="link_python">Установка ПО</a></li>
-              <li class="nav-item"><a href="/LearnLang/index_one_python.html" class="nav-link" id="link_python">Python</a></li>
-              <li class="nav-item"><a href="/LearnLang/index_one_c.html" class="nav-link" id="link_c">C</a></li>
-              <li class="nav-item"><a href="/LearnLang/index_one_c++.html" class="nav-link" id="link_c_plus_plus">C++</a></li>
-              <li class="nav-item"><a href="/LearnLang/index_one_java.html" class="nav-link" id="link_java">Java</a></li>
-              <li class="nav-item"><a href="/LearnLang/index-task-python.html" class="nav-link" id="link_tasks_python">Задачник по Python</a></li>
-              <li class="nav-item"><a href="/LearnLang/index-task-c.html" class="nav-link" id="link_tasks_C">Задачник по C</a></li>
-              <li class="nav-item"><a href="/LearnLang/index-task-c++.html" class="nav-link" id="link_tasks_C++">Задачник по C++</a></li>
-              <li class="nav-item"><a href="/LearnLang/index-task-java.html" class="nav-link" id="link_tasks_java">Задачник по Java</a></li>
+              <li class="nav-item"><a href="index-install-po.php" class="nav-link" id="link_python">Установка ПО</a></li>
+              <li class="nav-item"><a href="index_one_python.php" class="nav-link" id="link_python">Python</a></li>
+              <li class="nav-item"><a href="index_one_c.php" class="nav-link" id="link_c">C</a></li>
+              <li class="nav-item"><a href="index_one_c++.php" class="nav-link" id="link_c_plus_plus">C++</a></li>
+              <li class="nav-item"><a href="index_one_java.php" class="nav-link" id="link_java">Java</a></li>
+              <li class="nav-item"><a href="index-task-python.php" class="nav-link" id="link_tasks_python">Задачник по Python</a></li>
+              <li class="nav-item"><a href="index-task-c.php" class="nav-link" id="link_tasks_C">Задачник по C</a></li>
+              <li class="nav-item"><a href="index-task-c++.php" class="nav-link" id="link_tasks_C++">Задачник по C++</a></li>
+              <li class="nav-item"><a href="index-task-java.php" class="nav-link" id="link_tasks_java">Задачник по Java</a></li>
             </ul>
         </header>
             <!--Главный контент-->
             <section class="mb-3 itd-bg-install-po">
                 <div class="container">
                     <div class="row">
-                        <div class="col-xs-12 mb-3">
+                        <div class="col-xs-12 mb-3" style="border-bottom: #95ACFD 1px solid;">
                             <h1 class="text-center p-3 itd-title-po">Установка Visual Studio.</h1>
                         </div>
-                        <div class="row border-bottom mb-3">
+                        <div class="row mb-3" style="border-bottom: #95ACFD 1px solid;">
                             <div class="col-xs-12">
                                 <h3 class="mb-3">Шаг 1. Подготовка компьютера к установке Visual Studio</h3>
                                 <p class="fs-5 ms-1">Перед началом установки Visual Studio:</p>
@@ -52,7 +55,7 @@
                                 </ol>
                             </div>
                         </div>
-                        <div class="row border-bottom mb-3">
+                        <div class="row mb-3" style="border-bottom: #95ACFD 1px solid;">
                             <div class="col-xs-12">
                                 <h3 class="mb-3">Шаг 2. Определение версии и выпуска Visual Studio для установки</h3>
                                 <p class="fs-5 ms-1">Вам потребуется решить, какая версия и выпуск Visual Studio необходимо установить. Наиболее распространенными вариантами являются:</p>
@@ -65,7 +68,7 @@
                                 </ul>
                             </div>
                         </div>
-                        <div class="row border-bottom mb-3">
+                        <div class="row mb-3" style="border-bottom: #95ACFD 1px solid;">
                             <div class="col-xs-12">
                                 <h3 class="mb-3">Шаг 3. Запуск установки</h3>
                                 <p class="fs-5 ms-1">Если вы скачали загрузочный файл, его можно использовать для установки Visual Studio, если у вас есть разрешения администратора. Загрузчик сначала установит последнюю версию установщика Visual Studio. Установщик — это отдельная программа, которая предоставляет все необходимые компоненты для установки и настройки Visual Studio.</p>
@@ -73,17 +76,17 @@
                                     <li class="mb-2 fs-5">В папке "Загрузки" дважды щелкните загрузчик с именем VisualStudioSetup.exe или с именем vs_community.exe, чтобы начать установку.</li>
                                     <li class="mb-2 fs-5">Если появляется оповещение системы контроля учетных записей, нажмите кнопку Да. Мы попросим вас принять условия лицензии и заявление о конфиденциальности корпорации Майкрософт. Выберите Продолжить.</li>
                                 </ol>
-                                <img src="/LearnLang/resourse/modals_window.png" class="mb-3 mt-2 mx-auto d-block" alt="модальное окно">
+                                <img src="resourse/modals_window.png" class="mb-3 mt-2 mx-auto d-block" alt="модальное окно">
                                 <p class="fs-5">Вы также можете инициировать установку любого продукта, предлагаемого на вкладке "Доступный установщик Visual Studio".</p>
                             </div>
                         </div>
-                        <div class="row border-bottom mb-3">
+                        <div class="row mb-3" style="border-bottom: #95ACFD 1px solid;">
                             <div class="col-xs-12">
                                 <h3 class="mb-3">Шаг 4. Выбор рабочих нагрузок</h3>
                                 <p class="fs-5 ms-1">После установки установщика Visual Studio его можно использовать для настройки установки, выбрав нужные наборы компонентов или рабочие нагрузки. Это делается следующим образом.</p>
                                 <ol class="">
                                     <li class="mb-2 fs-5">Выберите нужную рабочую нагрузку в Visual Studio Installer.
-                                        <img src="/LearnLang/resourse/vs-installer-workloads.png" height="400" class="mx-auto d-block mt-3 mb-3" alt="выбор загрузки">
+                                        <img src="resourse/vs-installer-workloads.png" height="400" class="mx-auto d-block mt-3 mb-3" alt="выбор загрузки">
                                         Ознакомьтесь с описаниями рабочих нагрузок, чтобы решить, какая рабочая нагрузка поддерживает необходимые функции. Например, выберите рабочую нагрузку ASP.NET и веб-разработка, чтобы изменить веб-страницы ASP.NET с помощью интерактивного предварительного просмотра или создать быстрые веб-приложения с помощью Blazor. Или выберите рабочую нагрузку Классические и мобильные приложения для разработки кросс-платформенных приложений с помощью C# или проектов C++, предназначенных для C++20.
                                     </li>
                                     <li class="mb-2 fs-5">Выбрав нужные рабочие нагрузки, нажмите кнопку Установить.</li>
@@ -91,30 +94,30 @@
                                 </ol>
                             </div>
                         </div>
-                        <div class="row border-bottom mb-3">
+                        <div class="row mb-3" style="border-bottom: #95ACFD 1px solid;">
                             <div class="col-xs-12">
                                 <h3 class="mb-3">Шаг 5. Выбор отдельных компонентов (необязательно)</h3>
                                 <p class="fs-5 ms-1"> Если вы не хотите использовать функцию "Рабочие нагрузки", чтобы настроить установку Visual Studio или добавить дополнительные компоненты, чем установка рабочей нагрузки, можно сделать это, установив или добавив отдельные компоненты на вкладке "Отдельные компоненты". Выберите нужные компоненты, а затем следуйте инструкциям.</p>
-                                <img src="/LearnLang/resourse/vs-installer-individual-components.png" height="400" class="mx-auto d-block mt-3 mb-3" alt="загрузка элементов">
+                                <img src="resourse/vs-installer-individual-components.png" height="400" class="mx-auto d-block mt-3 mb-3" alt="загрузка элементов">
                             </div>
                         </div>
-                        <div class="row border-bottom mb-3">
+                        <div class="row mb-3" style="border-bottom: #95ACFD 1px solid;">
                             <div class="col-xs-12">
                                 <h3 class="mb-3">Шаг 6. Установка языковых пакетов (необязательно)</h3>
                                 <p class="fs-5 ms-1">По умолчанию при первом запуске установщик пытается использовать язык операционной системы. Чтобы установить Visual Studio на нужном языке, выберите в Visual Studio Installer вкладку Языковые пакеты и следуйте указаниям.</p>
-                                <img src="/LearnLang/resourse/vs-installer-individual-components.png" height="400" class="mx-auto d-block mt-3 mb-3" alt="загрузка элементов">
+                                <img src="resourse/vs-installer-individual-components.png" height="400" class="mx-auto d-block mt-3 mb-3" alt="загрузка элементов">
                                 
                             </div>
                         </div>
-                        <div class="row border-bottom mb-3">
+                        <div class="row mb-3" style="border-bottom: #95ACFD 1px solid;">
                             <div class="col-xs-12">
                                 <h3 class="mb-3">Шаг 7. Выбор расположения установки (дополнительно)</h3>
                                 <p class="fs-5 ms-1">Вы можете уменьшить место, занимаемое установкой Visual Studio на системном диске. Дополнительные сведения см. в разделе Выбор расположений установки.</p>
-                                <img src="/LearnLang/resourse/vs-installer-installation-locations.png" height="400" class="mx-auto d-block mt-3 mb-3" alt="загрузка элементов">
+                                <img src="resourse/vs-installer-installation-locations.png" height="400" class="mx-auto d-block mt-3 mb-3" alt="загрузка элементов">
                                 
                             </div>
                         </div>
-                        <div class="row border-bottom mb-3">
+                        <div class="row mb-3">
                             <div class="col-xs-12">
                                 <h3 class="mb-3">Шаг 8. Начало разработки</h3>
                                 <ol>
@@ -137,21 +140,21 @@
                   <div class="container">
                     <div class="row">
                       <div class="col">
-                        <li class="nav-item"><a href="/LearnLang/index-install-po.html" class="nav-link px-2 text-light">Установка ПО</a></li>
-                        <li class="nav-item"><a href="/LearnLang/index_one_python.html" class="nav-link px-2 text-light">Python</a></li>
+                        <li class="nav-item"><a href="index-install-po.php" class="nav-link px-2 text-light">Установка ПО</a></li>
+                        <li class="nav-item"><a href="index_one_python.php" class="nav-link px-2 text-light">Python</a></li>
                       </div>
                   
                       <div class="col">
-                        <li class="nav-item"><a href="/LearnLang/index_one_c.html" class="nav-link px-2 text-light">C</a></li>
-                        <li class="nav-item"><a href="/LearnLang/index_one_c++.html" class="nav-link px-2 text-light">C++</a></li>
+                        <li class="nav-item"><a href="index_one_c.php" class="nav-link px-2 text-light">C</a></li>
+                        <li class="nav-item"><a href="index_one_c++.php" class="nav-link px-2 text-light">C++</a></li>
                       </div>
                       <div class="col">
-                        <li class="nav-item"><a href="/LearnLang/index-task-python.html" class="nav-link px-2 text-light">Задачник по Python</a></li>
-                        <li class="nav-item"><a href="/LearnLang/index-task-c.html" class="nav-link px-2 text-light">Задачник по C</a></li>
+                        <li class="nav-item"><a href="index-task-python.php" class="nav-link px-2 text-light">Задачник по Python</a></li>
+                        <li class="nav-item"><a href="index-task-c.php" class="nav-link px-2 text-light">Задачник по C</a></li>
                       </div>
                       <div class="col">
-                        <li class="nav-item"><a href="/LearnLang/index-task-c++.html" class="nav-link px-2 text-light">Задачник по C++</a></li>
-                        <li class="nav-item"><a href="/LearnLang/index-task-java.html" class="nav-link px-2 text-light">Задачник по Java</a></li>
+                        <li class="nav-item"><a href="index-task-c++.php" class="nav-link px-2 text-light">Задачник по C++</a></li>
+                        <li class="nav-item"><a href="index-task-java.php" class="nav-link px-2 text-light">Задачник по Java</a></li>
                       </div>
                     </div>
                   </div>

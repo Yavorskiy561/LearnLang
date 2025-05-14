@@ -1,34 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="/LearnLang/style_pg/style-task.css">
-    <link rel="stylesheet" href="/LearnLang/style_pg/style-animation.css">
-    <link rel="stylesheet" href="/LearnLang/style_pg/style_index_head_page.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="/LearnLang/resourse/logo.svg" height="10" type="image/x-icon">
-    <title>learnlang</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script>
+  
+  <!--Стили-->  
+  <link rel="stylesheet" href="/style_pg/style-animation.css">
+  <link rel="stylesheet" href="/style_pg/style_index_head_page.css">
+  <link rel="stylesheet" href="/style_pg/style_index_head_page.css">
+  
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="/resourse/logo.svg" height="10" type="image/x-icon">
+  <title>learnlang</title>
 </head>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 <!--Главная страница-->
     <div class="wrapper">
         <!--Header главной страницы-->
         <header class="d-flex flex-wrap justify-content-center py-3 border-bottom itd-bg-header" id="header">
-          <a href="/LearnLang/index.html" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
-            <img src="/LearnLang/resourse/logo.svg" height="60"  alt="Логотип">
+          <a href="index.php" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
+            <img src="resourse/logo.svg" height="60"  alt="Логотип">
             <h1 class="logo_name">LearnLang</h1>
           </a>
           <ul class="nav itd-nav nav-pills">
-            <li class="nav-item"><a href="/LearnLang/index-install-po.html" class="nav-link" id="link_python">Установка ПО</a></li>
-            <li class="nav-item"><a href="/LearnLang/index_one_python.html" class="nav-link" id="link_python">Python</a></li>
-            <li class="nav-item"><a href="/LearnLang/index_one_c.html" class="nav-link" id="link_c">C</a></li>
-            <li class="nav-item"><a href="/LearnLang/index_one_c++.html" class="nav-link" id="link_c_plus_plus">C++</a></li>
-            <li class="nav-item"><a href="/LearnLang/index_one_java.html" class="nav-link" id="link_java">Java</a></li>
-            <li class="nav-item"><a href="/LearnLang/index-task-python.html" class="nav-link" id="link_tasks_python">Задачник по Python</a></li>
-            <li class="nav-item"><a href="/LearnLang/index-task-c.html" class="nav-link" id="link_tasks_C">Задачник по C</a></li>
-            <li class="nav-item"><a href="/LearnLang/index-task-c++.html" class="nav-link" id="link_tasks_C++">Задачник по C++</a></li>
-            <li class="nav-item"><a href="/LearnLang/index-task-java.html" class="nav-link" id="link_tasks_java">Задачник по Java</a></li>
+            <li class="nav-item"><a href="/index-install-po.php" class="nav-link" id="link_python">Установка ПО</a></li>
+            <li class="nav-item"><a href="/index_one_python.php" class="nav-link" id="link_python">Python</a></li>
+            <li class="nav-item"><a href="/index_one_c.php" class="nav-link" id="link_c">C</a></li>
+            <li class="nav-item"><a href="/index_one_c++.php" class="nav-link" id="link_c_plus_plus">C++</a></li>
+            <li class="nav-item"><a href="/index_one_java.php" class="nav-link" id="link_java">Java</a></li>
+            <li class="nav-item"><a href="/index-task-python.php" class="nav-link" id="link_tasks_python">Задачник по Python</a></li>
+            <li class="nav-item"><a href="/index-task-c.php" class="nav-link" id="link_tasks_C">Задачник по C</a></li>
+            <li class="nav-item"><a href="/index-task-c++.php" class="nav-link" id="link_tasks_C++">Задачник по C++</a></li>
+            <li class="nav-item"><a href="/index-task-java.php" class="nav-link" id="link_tasks_java">Задачник по Java</a></li>
           </ul>
       </header>
 
@@ -36,7 +40,7 @@
         <div class="content-page d-flex">
             <div class="flex-shrink-0 p-3 border-end shadows border-3" style="width: 280px;">
                 <div class="d-flex align-items-center justify-content-center pb-3 mb-2 border-bottom border-danger-subtle">
-                  <span class="text-center fs-5 fw-semibold">Задачник по Java</span>
+                  <span class="text-center fs-5 fw-semibold">Задачник по Python</span>
                 </div>
                 <ul class="list-unstyled ps-0 ">
                   <!--Секция Начальный уровень-->
@@ -98,7 +102,7 @@
                         Задачники по языку программирования, позволяют разработчикам практиковаться в написании кода, решении конкретных задач и изучении особенностей языка. Эти задачи могут варьироваться по сложности и охватывать разные аспекты программирования, включая базовые конструкции языка, алгоритмы, структуры данных, объектно-ориентированное программирование и другие темы.</p>
                         <div>
                           <p class="fs-4">
-                            Ответы на упражнения можно посмотреть, нажав на кнопку -> <img src="/LearnLang/resourse/arrow-down.svg" class="border p-1 rounded" width="30" alt="кнопка">
+                            Ответы на упражнения можно посмотреть, нажав на кнопку -> <img src="resourse/arrow-down.svg" class="border p-1 rounded" width="30" alt="кнопка">
                           </p>
                         </div>
                     </div>
@@ -113,45 +117,39 @@
                         <div class="col-xs-12 border-bottom border-1">
                             <h2 class="text-start p-2">Первый уровень</h2>
                             <p class="ms-3 fs-5">Напишите программу, которая выводит на экран “Привет, мир!”.</p>
-                            <button class="btn btn-toggle d-inline-flex mb-3 border rounded border-1 collapsed" data-bs-toggle="collapse" data-bs-target="#level-one-task-one" aria-expanded="false" onclick="FlipVertical()"><div class="img-container"><img src="/LearnLang/resourse/arrow-down.svg" height="20"></div></button>
+                            <button class="btn btn-toggle d-inline-flex mb-3 border rounded border-1 collapsed" data-bs-toggle="collapse" data-bs-target="#level-one-task-one" aria-expanded="false"><div class="img-container"><img src="resourse/arrow-down.svg" height="20"></div></button>
                             <div class="collapse border rounded p-3 mb-3 mt-1 border-3 border-primary-subtle" id="level-one-task-one">
                               <div class="border-start border-danger-subtle border-2">
                                 <div class="ms-2">
-                                  <span style="color: #0000FF;">System</span>.<span style="color: #0000FF;">out</span>.<span>println</span>(<span style="color: #FF0000;">"Привет, Мир!"</span>);
+                                  <span style="color: #0000FF;">print</span><span>(</span><span style="color: #FF0000;">"Привет, мир!"</span>)
                                 </div>
                               </div>
                             </div>
                         </div>
                         <!--Задача два-->
                         <div class="col-xs-12 border-bottom border-1">
-                          <p class="ms-3 fs-5">Напишите программу, которая запрашивает у пользователя два числа и выводит их сумму.</p>
-                          <button class="btn btn-toggle d-inline-flex align-items-center border mb-3 rounded border-1 collapsed" data-bs-toggle="collapse" data-bs-target="#level-two-task-one" aria-expanded="false"><img src="/LearnLang/resourse/arrow-down.svg" height="20"> </button>
+                          <p class="ms-3 fs-5">Напишите программу, которая запрашивает у пользователя его имя и выводит приветствие, например: “Привет, [имя пользователя]!”.</p>
+                          <button class="btn btn-toggle d-inline-flex align-items-center border mb-3 rounded border-1 collapsed" data-bs-toggle="collapse" data-bs-target="#level-two-task-one" aria-expanded="false"><img src="resourse/arrow-down.svg" height="20"> </button>
                           <div class="collapse border itd-border-collapse rounded p-3 mb-3 mt-1 border-3 border-primary-subtle" id="level-two-task-one">
                             <div class="border-start border-danger-subtle border-2">
                               <div class="ms-2">
-                                <span style="color: #0000FF;">Scaner</span> scaner = <span style="color: #0000FF;">new</span> Scaner(<span style="color: #0000FF;">System</span>.in); <br><br>
-                                <span style="color: #0000FF;">System</span>.<span style="color: #0000FF;">out</span>.<span>print</span>(<span style="color: #FF0000;">"Введите первое число: "</span>);<br>
-                                <span style="color: #0000FF;">int</span> number1 = <span style="color: rgb(133, 70, 47);">scaner</span>.<span  style="color: rgb(80, 10, 80);">nextInt</span>();<br><br>
-                                <span style="color: #0000FF;">System</span>.<span style="color: #0000FF;">out</span>.<span>println</span>(<span style="color: #FF0000;">"Введите второе число: "</span>);<br>
-                                <span style="color: #0000FF;">int</span> number2 = <span style="color: rgb(133, 70, 47);">scaner</span>.<span  style="color: rgb(80, 10, 80);">nextInt</span>();<br><br>
-                                <span style="color: #0000FF;">int </span>sum = <span style="color: rgb(133, 70, 47);">number1</span>+<span style="color: rgb(133, 70, 47);">number2</span>;<br><br>
-                                <span style="color: #0000FF;">System</span>.<span style="color: #0000FF;">out</span>.<span>println</span>(<span style="color: #FF0000;">"Сумма чисел: "</span> + <span style="color: rgb(133, 70, 47);">sum</span>);
+                                <span>name</span> = <span style="color: #0000FF;">input</span><span>(</span><span style="color: #FF0000;">"Как тебя зовут?"</span>)<br>
+                                <span style="color: #0000FF;">print</span><span>(</span><span style="color: #FF0000;">"Привет, !", <span style="color: rgb(133, 70, 47);">name</span> + <span style="color: #FF0000;">"!"</span></span><span>)</span>
                               </div>
                             </div>
                           </div>
                         </div>
                       <!--Задача три-->
                       <div class="col-xs-12 border-bottom border-1 justify-content-center align-items-center">
-                        <p class="ms-3 fs-5">Напишите программу, которая запрашивает у пользователя радиус окружности и вычисляет ее площадь.</p>
-                        <button class="btn btn-toggle d-inline-flex mb-3 align-items-center border rounded border-1 collapsed" data-bs-toggle="collapse" data-bs-target="#level-three-task-one" aria-expanded="false"><img src="/LearnLang/resourse/arrow-down.svg" height="20"> </button>
+                        <p class="ms-3 fs-5">Напишите программу, которая запрашивает у пользователя два числа и складывает их.</p>
+                        <button class="btn btn-toggle d-inline-flex mb-3 align-items-center border rounded border-1 collapsed" data-bs-toggle="collapse" data-bs-target="#level-three-task-one" aria-expanded="false"><img src="resourse/arrow-down.svg" height="20"> </button>
                         <div class="collapse border rounded p-3 mb-3 mt-1 border-3 border-primary-subtle" id="level-three-task-one">
                           <div class="border-start border-danger-subtle border-2">
                             <div class="ms-2">
-                              <span style="color: #0000FF;">Scaner</span> scaner = <span style="color: #0000FF;">new</span> Scaner(<span style="color: #0000FF;">System</span>.in); <br><br>
-                              <span style="color: #0000FF;">System</span>.<span style="color: #0000FF;">out</span>.<span>print</span>(<span style="color: #FF0000;">"Введите радиус окружности: "</span>);<br>
-                              <span style="color: #0000FF;">double</span> radius = <span style="color: rgb(133, 70, 47);">scaner</span>.<span style="color: rgb(80, 10, 80);">nextDouble</span>();<br><br>
-                              <span style="color: #0000FF;">double</span> area = <span style="color: #0000FF;">Math</span>.<span style="color: rgb(80, 10, 80);">PI</span> * <span style="color: rgb(133, 70, 47);">radius</span> * <span style="color: rgb(133, 70, 47);">radius</span>;<br><br>
-                              <span style="color: #0000FF;">System</span>.<span style="color: #0000FF;">out</span>.<span>println</span>(<span style="color: #FF0000;">"Площадь окружности: "</span> + <span style="color: rgb(133, 70, 47);">area</span>);
+                              <span>num1</span> = <span style="color: #0000FF;">float</span><span>(</span><span style="color: #0000FF;">input</span><span>(</span><span></span>"Введите первое число: "<span>)</span><span>)</span><br>
+                              <span>num2</span> = <span style="color: #0000FF;">float</span><span>(</span><span style="color: #0000FF;">input</span><span>(</span><span></span>"Введите второе число: "<span>)</span><span>)</span><br>
+                              <span>result</span> = <span>num1</span> <span>+</span> <span>num2</span><br>
+                              <span style="color: #0000FF;">print</span><span>(</span><span style="color: #FF0000;">"Сумма двух чисел равна", <span style="color: rgb(133, 70, 47);">result</span></span><span>)</span>
                             </div>
                           </div>
                         </div>
@@ -159,31 +157,28 @@
                     <!--Задача четыре-->
                     <div class="col-xs-12 border-bottom border-1">
                       <p class="ms-3 fs-5">Напишите программу, которая запрашивает у пользователя строку и выводит ее длину.</p>
-                      <button class="btn btn-toggle d-inline-flex align-items-center border rounded border-1 collapsed mb-3" data-bs-toggle="collapse" data-bs-target="#level-four-task-one" aria-expanded="false"><img src="/LearnLang/resourse/arrow-down.svg" height="20"> </button>
+                      <button class="btn btn-toggle d-inline-flex align-items-center border rounded border-1 collapsed mb-3" data-bs-toggle="collapse" data-bs-target="#level-four-task-one" aria-expanded="false"><img src="resourse/arrow-down.svg" height="20"> </button>
                       <div class="collapse border rounded p-3 mb-3 mt-1 border-3 border-primary-subtle" id="level-four-task-one">
                         <div class="border-start border-danger-subtle border-2">
                           <div class="ms-2">
-                            <span style="color: #0000FF;">Scaner</span> scaner = <span>new</span> Scaner(<span>System</span>.in); <br><br>
-                            <span style="color: #0000FF;">System</span>.<span style="color: #0000FF;">out</span>.<span>print</span>(<span style="color: #FF0000;">"Введите строку: "</span>);<br>
-                            <span style="color: #0000FF;">String</span> input = <span style="color: rgb(133, 70, 47);">scaner</span>.<span style="color: rgb(80, 10, 80);">nextLine</span>();<br><br>
-                            <span style="color: #0000FF;">int</span> length = <span style="color: rgb(133, 70, 47);">input</span>.<span style="color: rgb(80, 10, 80);">length()</span>;<br><br>
-                            <span style="color: #0000FF;">System</span>.<span style="color: #0000FF;">out</span>.<span>println</span>(<span style="color: #FF0000;">"Длина строки: "</span> + <span style="color: rgb(133, 70, 47);">length</span>);
+                            <span>str</span> = <span style="color: #0000FF;">input</span><span>(</span><span>"Введите первое число: "</span>)<br>
+                            <span style="color: #0000FF;">print</span>(<span style="color: #FF0000;">"Длина строки равна", <span style="color: #0000FF;">len</span><span style="color: black;">(</span><span style="color: rgb(133, 70, 47);">str</span><span style="color: black;">)</span><span style="color: black;">)</span>
                           </div>
                         </div>    
                       </div>
                     </div>
                     <!--Задача пять-->
                     <div class="col-xs-12 border-bottom border-1 mb-5">
-                      <p class="ms-3 fs-5">Напишите программу, которая запрашивает у пользователя температуру в градусах Цельсия и выполняет её перевод в градусы Фаренгейта.</p>
-                      <button class="btn btn-toggle d-inline-flex align-items-center border rounded border-1 collapsed mb-2" data-bs-toggle="collapse" data-bs-target="#level-five-task-one" aria-expanded="false"><img src="/LearnLang/resourse/arrow-down.svg" height="20"> </button>
-                      <div class="collapse  border rounded p-3 mb-5 mt-1 border-3 border-primary-subtle" id="level-five-task-one">
+                      <p class="ms-3 fs-5">Напишите программу, которая запрашивает у пользователя число и проверяет, четное оно или нечетное.</p>
+                      <button class="btn btn-toggle d-inline-flex align-items-center border rounded border-1 collapsed mb-2" data-bs-toggle="collapse" data-bs-target="#level-five-task-one" aria-expanded="false"><img src="resourse/arrow-down.svg" height="20"> </button>
+                      <div class="collapse border rounded p-3 mb-5 mt-1 border-3 border-primary-subtle" id="level-five-task-one">
                         <div class="border-start border-danger-subtle border-2">
                           <div class="ms-2">
-                            <span style="color: #0000FF;">Scaner</span> scaner = <span style="color: #0000FF;">new</span> Scaner(<span style="color: #0000FF;">System</span>.in); <br><br>
-                            <span style="color: #0000FF;">System</span>.<span style="color: #0000FF;">out</span>.<span>print</span>(<span style="color: #FF0000;">"Введите температуру в градусах Цельсии: "</span>);<br>
-                            <span style="color: #0000FF;">double</span> celsius = <span style="color: rgb(133, 70, 47);">scaner</span>.<span style="color: rgb(80, 10, 80);">nextDouble</span>();<br><br>
-                            <span style="color: #0000FF;">double</span> fahrenheit = ( <span style="color: rgb(133, 70, 47);">celsius</span> * <span style="color: #008000;">9</span>/ <span style="color: #008000;">5</span> ) + <span style="color: #008000;">32</span>;<br><br>
-                            <span style="color: #0000FF;">System</span>.<span style="color: #0000FF;">out</span>.<span>println</span>(<span style="color: #FF0000;">"Температура в градусах Фаренгейта: "</span> + <span style="color: rgb(133, 70, 47);">fahrenheit</span>);
+                            <span>number</span> = <span style="color: #0000FF;">int</span><span>(</span><span style="color: #0000FF;">input</span><span>(</span><span  style="color: #FF0000;">"Введите число: "</span><span>)</span><span>)</span><br>
+                            <span  style="color: rgb(80, 10, 80);">if</span> <span style="color: rgb(133, 70, 47);">number %</span> <span>2</span> <span>==</span> <span>0</span>: <br>
+                            <span style="color: #0000FF;">print</span>( <span style="color: #FF0000;">"Число"</span>, <span style="color: rgb(133, 70, 47);">number</span>, <span style="color: #FF0000;">"четное"</span> ) <br>
+                            <span style="color: rgb(80, 10, 80);">else</span>:
+                            <span style="color: #0000FF;">print</span>( <span style="color: #FF0000;">"Число"</span>, <span style="color: rgb(133, 70, 47);">number</span>, <span style="color: #FF0000;">"нечетное"</span> )
                           </div>
                         </div>
                       </div>
@@ -200,21 +195,21 @@
             <div class="container">
               <div class="row">
                 <div class="col">
-                  <li class="nav-item"><a href="/LearnLang/index-install-po.html" class="nav-link px-2 text-light">Установка ПО</a></li>
-                  <li class="nav-item"><a href="/LearnLang/index_one_python.html" class="nav-link px-2 text-light">Python</a></li>
+                  <li class="nav-item"><a href="index-install-po.php" class="nav-link px-2 text-light">Установка ПО</a></li>
+                  <li class="nav-item"><a href="index_one_python.php" class="nav-link px-2 text-light">Python</a></li>
                 </div>
             
                 <div class="col">
-                  <li class="nav-item"><a href="/LearnLang/index_one_c.html" class="nav-link px-2 text-light">C</a></li>
-                  <li class="nav-item"><a href="/LearnLang/index_one_c++.html" class="nav-link px-2 text-light">C++</a></li>
+                  <li class="nav-item"><a href="index_one_c.php" class="nav-link px-2 text-light">C</a></li>
+                  <li class="nav-item"><a href="index_one_c++.php" class="nav-link px-2 text-light">C++</a></li>
                 </div>
                 <div class="col">
-                  <li class="nav-item"><a href="/LearnLang/index-task-python.html" class="nav-link px-2 text-light">Задачник по Python</a></li>
-                  <li class="nav-item"><a href="/LearnLang/index-task-c.html" class="nav-link px-2 text-light">Задачник по C</a></li>
+                  <li class="nav-item"><a href="index-task-python.php" class="nav-link px-2 text-light">Задачник по Python</a></li>
+                  <li class="nav-item"><a href="index-task-c.php" class="nav-link px-2 text-light">Задачник по C</a></li>
                 </div>
                 <div class="col">
-                  <li class="nav-item"><a href="/LearnLang/index-task-c++.html" class="nav-link px-2 text-light">Задачник по C++</a></li>
-                  <li class="nav-item"><a href="/LearnLang/index-task-java.html" class="nav-link px-2 text-light">Задачник по Java</a></li>
+                  <li class="nav-item"><a href="index-task-c++.php" class="nav-link px-2 text-light">Задачник по C++</a></li>
+                  <li class="nav-item"><a href="index-task-java.php" class="nav-link px-2 text-light">Задачник по Java</a></li>
                 </div>
               </div>
             </div>
