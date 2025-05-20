@@ -39,7 +39,6 @@
       </header>
 
          <div class="content_page d-flex">
-
             <!--Боковая панель-->
               <div class="flex-shrink-0 p-3 border-end shadows border-3" style="width: 280px;">
                 <div class="d-flex align-items-center justify-content-center pb-3 mb-2 border-bottom border-danger-subtle">

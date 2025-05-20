@@ -26,7 +26,7 @@
           <ul class="nav itd-nav nav-pills">
             <li class="nav-item"><a href="index-install-po.php" class="nav-link" id="link_python">Установка ПО</a></li>
             <li class="nav-item"><a href="index_one_python.php" class="nav-link" id="link_python">Python</a></li>
-            <li class="nav-item"><a href="index_one_c.php" class="nav-link" id="link_c">C</a></li>
+            <li class="nav-item"><a href="index-laungh.php" class="nav-link" id="link_c">C</a></li>
             <li class="nav-item"><a href="index_one_c++.php" class="nav-link" id="link_c_plus_plus">C++</a></li>
             <li class="nav-item"><a href="index_one_java.php" class="nav-link" id="link_java">Java</a></li>
             <li class="nav-item"><a href="index-task-python.php" class="nav-link" id="link_tasks_python">Задачник по Python</a></li>
@@ -92,7 +92,7 @@
                     </div>
                   </div>
                   <div class="col-xs-12">
-                    <div class="p-3 d-flex justify-content-center itd-bg-p">
+                    <div class="p-3 d-flex justify-content-center ">
                     <p class="justify-content-center d-block m-auto fs-5">
                       4. Творческий потенциал: Создание программ и приложений может быть творческим процессом, открывающим новые возможности для самовыражения и реализации идей.
                     </p>
@@ -205,7 +205,7 @@
         </div>
         <!--Footer главной страницы-->
         <footer class="d-flex  align-items-center p-4 border-top" id="footer">
-          <p class="col-md-6 mb-0 text-light">© 2024 Company, Inc</p>
+          <p class="col-md-6 mb-0 text-light">Яворский Илья</p>
       
           <ul class="nav col-md-6 d-flex">
             <div class="container">

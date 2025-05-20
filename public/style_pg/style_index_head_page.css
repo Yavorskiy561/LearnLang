@@ -1,11 +1,25 @@
-body{
+html, body {
     height: 100%;
-    width: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.wrapper {
+    flex: 1;
+}
+
+footer {
+    margin-top: auto;
 }
 .wrapper{
     display: flex;
     flex-direction: column;
 }
+
 #header{
     background: #7089DF;
 }
@@ -150,4 +164,13 @@ h1{
     position: sticky;
     top: 0;
     z-index: 1020;
+}
+.active-section {
+    background-color: #e9ecef;
+    border-color: #dee2e6;
+}
+
+.active-subsection {
+    font-weight: bold;
+    color: #0d6efd !important;
 }
