@@ -19,10 +19,6 @@ footer {
     display: flex;
     flex-direction: column;
 }
-
-#header{
-    background: #7089DF;
-}
 #header li a:hover{
     display: block;
     background: white;

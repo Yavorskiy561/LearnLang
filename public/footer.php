@@ -1,35 +1,68 @@
  <?php
  // footer.php
  ?>
- <!--Footer главной страницы-->
-        <footer class="d-flex mt-auto align-items-center p-4 border-top" id="footer">
-          <p class="col-md-6 mb-0 text-light">© 2025 Company, Inc</p>
-      
-          <ul class="nav col-md-6 d-flex">
-            <div class="container">
-              <div class="row">
-                <div class="col">
-                  <li class="nav-item"><a href="index-install-po.php" class="nav-link px-2 text-light">Установка ПО</a></li>
-                  <li class="nav-item"><a href="index_one_python.php" class="nav-link px-2 text-light">Python</a></li>
-                </div>
-            
-                <div class="col">
-                  <li class="nav-item"><a href="index_one_c.php" class="nav-link px-2 text-light">C</a></li>
-                  <li class="nav-item"><a href="index_one_c++.php" class="nav-link px-2 text-light">C++</a></li>
-                </div>
-                <div class="col">
-                  <li class="nav-item"><a href="index-task-python.php" class="nav-link px-2 text-light">Задачник по Python</a></li>
-                  <li class="nav-item"><a href="index-task-c.php" class="nav-link px-2 text-light">Задачник по C</a></li>
-                </div>
-                <div class="col">
-                  <li class="nav-item"><a href="index-task-c++.php" class="nav-link px-2 text-light">Задачник по C++</a></li>
-                  <li class="nav-item"><a href="index-task-java.php" class="nav-link px-2 text-light">Задачник по Java</a></li>
-                </div>
-              </div>
+<!-- footer страницы -->
+             
+      </main>
+            <footer class="mt-auto py-4 bg-dark text-white">
+    <div class="container">
+        <div class="row">
+            <!-- Блок с языками -->
+            <div class="col-md-4 mb-4">
+                <h5 class="text-warning">Языки программирования</h5>
+                <ul class="nav flex-column">
+                    <?php foreach ($languages as $lang): 
+                        $is_active = (isset($_GET['lang']) && $_GET['lang'] === $lang['slug']);
+                    ?>
+                    <li class="nav-item">
+                        <a href="/<?= htmlspecialchars($lang['slug']) ?>" 
+                           class="nav-link <?= $is_active ? 'text-danger' : 'text-white' ?>">
+                           <?= htmlspecialchars($lang['name']) ?>
+                        </a>
+                    </li>
+                    <?php endforeach; ?>
+                </ul>
             </div>
-          </ul>
-        </footer>
-      </div>
+
+            <!-- Блок с задачниками -->
+            <div class="col-md-4 mb-4">
+                <h5 class="text-warning">Практика</h5>
+                <ul class="nav flex-column">
+                    <?php foreach ($languages as $lang): ?>
+                    <li class="nav-item">
+                        <a href="/tasks/<?= htmlspecialchars($lang['slug']) ?>" 
+                           class="nav-link text-white">
+                           Задачи по <?= htmlspecialchars($lang['name']) ?>
+                        </a>
+                    </li>
+                    <?php endforeach; ?>
+                </ul>
+            </div>
+
+            <!-- Контакты -->
+            <div class="col-md-4">
+                <h5 class="text-warning">Контакты</h5>
+                <div class="d-flex flex-column">
+                    <a href="http://t.me/silux4" class="text-white mb-2">
+                        <i class="fab fa-telegram me-2"></i>Telegram
+                    </a>
+                    <a href="mailto:yavorskiy_ilya@inbox.ru" class="text-white mb-2">
+                        <i class="fas fa-envelope me-2"></i>Почта
+                    </a>
+                    <a href="https://github.com/Yavorskiy561/LearnLang" class="text-white">
+                        <i class="fab fa-github me-2"></i>GitHub проекта
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="row mt-4 border-top pt-3">
+            <div class="col-12 text-center">
+                <p class="mb-0 text-muted">&copy; <?= date('Y') ?> LearnLang. Все материалы находятся в свободном доступе</p>
+            </div>
+        </div>
     </div>
-</body>
+</footer>
+        </div>
+    </body>
 </html>

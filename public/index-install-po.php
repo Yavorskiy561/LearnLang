@@ -1,40 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script>
-  
-  <!--Стили-->  
-  <link rel="stylesheet" href="/style_pg/style-animation.css">
-  <link rel="stylesheet" href="/style_pg/style_index_head_page.css">
-  <link rel="stylesheet" href="/style_pg/style_index_head_page.css">
-  
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="shortcut icon" href="/resourse/logo.svg" height="10" type="image/x-icon">
-  <title>learnlang</title>
-</head>
-<body>
-    <!--Главная страница-->
-    <div class="wrapper">
-        <!--Header главной страницы-->
-        <header class="d-flex flex-wrap justify-content-center py-3 border-bottom itd-bg-header" id="header">
-            <a href="index.php" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
-              <img src="resourse/logo.svg" height="60"  alt="Логотип">
-              <h1 class="logo_name">LearnLang</h1>
-            </a>
-            <ul class="nav itd-nav nav-pills">
-              <li class="nav-item"><a href="index-install-po.php" class="nav-link" id="link_python">Установка ПО</a></li>
-              <li class="nav-item"><a href="index_one_python.php" class="nav-link" id="link_python">Python</a></li>
-              <li class="nav-item"><a href="index_one_c.php" class="nav-link" id="link_c">C</a></li>
-              <li class="nav-item"><a href="index_one_c++.php" class="nav-link" id="link_c_plus_plus">C++</a></li>
-              <li class="nav-item"><a href="index_one_java.php" class="nav-link" id="link_java">Java</a></li>
-              <li class="nav-item"><a href="index-task-python.php" class="nav-link" id="link_tasks_python">Задачник по Python</a></li>
-              <li class="nav-item"><a href="index-task-c.php" class="nav-link" id="link_tasks_C">Задачник по C</a></li>
-              <li class="nav-item"><a href="index-task-c++.php" class="nav-link" id="link_tasks_C++">Задачник по C++</a></li>
-              <li class="nav-item"><a href="index-task-java.php" class="nav-link" id="link_tasks_java">Задачник по Java</a></li>
-            </ul>
-        </header>
+<?php
+  require __DIR__ . '/header.php';
+?>
             <!--Главный контент-->
             <section class="mb-3 itd-bg-install-po">
                 <div class="container">
@@ -133,34 +99,6 @@
                 </div>
             </section>
             <!--Footer главной страницы-->
-            <footer class="d-flex  align-items-center p-4 border-top" id="footer">
-                <p class="col-md-6 mb-0 text-light">© 2024 Company, Inc</p>
-            
-                <ul class="nav col-md-6 d-flex">
-                  <div class="container">
-                    <div class="row">
-                      <div class="col">
-                        <li class="nav-item"><a href="index-install-po.php" class="nav-link px-2 text-light">Установка ПО</a></li>
-                        <li class="nav-item"><a href="index_one_python.php" class="nav-link px-2 text-light">Python</a></li>
-                      </div>
-                  
-                      <div class="col">
-                        <li class="nav-item"><a href="index_one_c.php" class="nav-link px-2 text-light">C</a></li>
-                        <li class="nav-item"><a href="index_one_c++.php" class="nav-link px-2 text-light">C++</a></li>
-                      </div>
-                      <div class="col">
-                        <li class="nav-item"><a href="index-task-python.php" class="nav-link px-2 text-light">Задачник по Python</a></li>
-                        <li class="nav-item"><a href="index-task-c.php" class="nav-link px-2 text-light">Задачник по C</a></li>
-                      </div>
-                      <div class="col">
-                        <li class="nav-item"><a href="index-task-c++.php" class="nav-link px-2 text-light">Задачник по C++</a></li>
-                        <li class="nav-item"><a href="index-task-java.php" class="nav-link px-2 text-light">Задачник по Java</a></li>
-                      </div>
-                    </div>
-                  </div>
-                </ul>
-              </footer>
-          </div>
-      </div>
-  </body>
-  </html>
+<?php
+  require __DIR__ . '/footer.php'; 
+?>

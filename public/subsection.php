@@ -33,6 +33,13 @@ try {
         exit;
     }
 
+    // Получаем контент подраздела
+    $stmt = $pdo->prepare("SELECT * FROM content_blocks 
+                      WHERE subsection_id = ? 
+                      ORDER BY order_index");
+    $stmt->execute([$subsection['id']]);
+    $content_blocks = $stmt->fetchAll();
+
     // Получаем все разделы для меню
     $stmt = $pdo->prepare("SELECT * FROM sections 
                           WHERE language_id = ? 
@@ -46,7 +53,29 @@ try {
     die($e->getMessage());
 }
 ?>
-
+<style>
+        /* Добавьте в head */
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .wrapper {
+            display: flex;
+            flex-direction: column;
+            min-height: 120vh;
+        }
+        .content_page{
+            display: flex;
+            flex-direction: column;
+            min-height: 390vh;
+        }
+        .content_page {
+            flex: 1;
+        }
+        
+    </style>
 <div class="content_page d-flex">
     <!-- Боковое меню -->
     <div class="flex-shrink-0 p-3 border-end shadows border-3" style="width: 280px;">
@@ -76,7 +105,7 @@ try {
                     ?>
                     <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
                         <?php foreach ($subsections_data as $sub): 
-                            $is_sub_active = ($sub['slug'] === $subsection_slug);
+                            $is_sub_active = ($sub['slug'] === $subsection_slug && $section['slug'] === $section_slug);
                         ?>
                         <li>
                             <a href="/<?= htmlspecialchars($lang_slug) ?>/<?= htmlspecialchars($section['slug']) ?>/<?= htmlspecialchars($sub['slug']) ?>" 
@@ -102,9 +131,32 @@ try {
                     </h1>
                 </div>
                 <div class="col-12">
-                    <div class="content">
-                        <?= htmlspecialchars_decode($subsection['content']) ?>
-                    </div>
+                    <?php foreach ($content_blocks as $block): ?>
+                        <div class="mb-4">
+                            <?php switch($block['block_type']):
+                                case 'heading': ?>
+                                    <h3><?= htmlspecialchars_decode($block['content']) ?></h3>
+                                <?php break; ?>
+                                
+                                <?php case 'subheading': ?>
+                                    <<?= $block['meta'] ?: 'h4' ?>>
+                                        <?= htmlspecialchars_decode($block['content']) ?>
+                                    </<?= $block['meta'] ?: 'h4' ?>>
+                                <?php break; ?>
+                                
+                                <?php case 'paragraph': ?>
+                                    <p class="fs-5"><?= htmlspecialchars_decode($block['content']) ?></p>
+                                <?php break; ?>
+                                
+                                <?php case 'code': ?>
+                                    <pre class="border p-3"><code class="language-<?= $block['meta'] ?>">
+                                        <?= htmlspecialchars(trim($block['content'])) ?>
+                                    </code></pre>
+                                <?php break; ?>
+                                
+                            <?php endswitch; ?>
+                        </div>
+                    <?php endforeach; ?>
                 </div>
             </div>
         </div>
