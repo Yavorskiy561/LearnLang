@@ -53,29 +53,6 @@ try {
     die($e->getMessage());
 }
 ?>
-<style>
-        /* Добавьте в head */
-        html, body {
-            height: 100%;
-            margin: 0;
-            padding: 0;
-        }
-        
-        .wrapper {
-            display: flex;
-            flex-direction: column;
-            min-height: 120vh;
-        }
-        .content_page{
-            display: flex;
-            flex-direction: column;
-            min-height: 390vh;
-        }
-        .content_page {
-            flex: 1;
-        }
-        
-    </style>
 <div class="content_page d-flex">
     <!-- Боковое меню -->
     <div class="flex-shrink-0 p-3 border-end shadows border-3" style="width: 280px;">
@@ -123,44 +100,50 @@ try {
 
     <!-- Основной контент -->
     <section class="w-100% h-100%">
-        <div class="container">
-            <div class="row">
-                <div class="col-12 mb-3" style="background: #DF7070;">
-                    <h1 class="text-center text-light p-2">
-                        <?= htmlspecialchars($subsection['title']) ?>
-                    </h1>
-                </div>
-                <div class="col-12">
-                    <?php foreach ($content_blocks as $block): ?>
-                        <div class="mb-4">
-                            <?php switch($block['block_type']):
-                                case 'heading': ?>
-                                    <h3><?= htmlspecialchars_decode($block['content']) ?></h3>
-                                <?php break; ?>
-                                
-                                <?php case 'subheading': ?>
-                                    <<?= $block['meta'] ?: 'h4' ?>>
-                                        <?= htmlspecialchars_decode($block['content']) ?>
-                                    </<?= $block['meta'] ?: 'h4' ?>>
-                                <?php break; ?>
-                                
-                                <?php case 'paragraph': ?>
-                                    <p class="fs-5"><?= htmlspecialchars_decode($block['content']) ?></p>
-                                <?php break; ?>
-                                
-                                <?php case 'code': ?>
-                                    <pre class="border p-3"><code class="language-<?= $block['meta'] ?>">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 mb-3" style="background: #DF7070;">
+                <h1 class="text-center text-light p-2">
+                    <?= htmlspecialchars($subsection['title']) ?>
+                </h1>
+            </div>
+            <div class="col-12">
+                <?php foreach ($content_blocks as $block): ?>
+                    <div class="mb-4">
+                        <?php switch($block['block_type']):
+                            case 'heading': ?>
+                                <!-- Добавляем важность стиля -->
+                                <h3 style="color: #DF7070 !important;">
+                                    <?= htmlspecialchars_decode($block['content']) ?>
+                                </h3>
+                            <?php break; ?>
+                            
+                            <?php case 'subheading': ?>
+                                <!-- Добавляем стиль для всех подзаголовков -->
+                                <<?= $block['meta'] ?: 'h4' ?> style="color: #DF7070;">
+                                    <?= htmlspecialchars_decode($block['content']) ?>
+                                </<?= $block['meta'] ?: 'h4' ?>>
+                            <?php break; ?>
+                            
+                            <?php case 'paragraph': ?>
+                                <p class="fs-5"><?= htmlspecialchars_decode($block['content']) ?></p>
+                            <?php break; ?>
+                            
+                            <?php case 'code': ?>
+                                <pre class="border p-3" style="border-color: #DF7070;">
+                                    <code class="language-<?= $block['meta'] ?>">
                                         <?= htmlspecialchars(trim($block['content'])) ?>
-                                    </code></pre>
-                                <?php break; ?>
-                                
-                            <?php endswitch; ?>
-                        </div>
-                    <?php endforeach; ?>
-                </div>
+                                    </code>
+                                </pre>
+                            <?php break; ?>
+                            
+                        <?php endswitch; ?>
+                    </div>
+                <?php endforeach; ?>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 </div>
 
 <?php require __DIR__ . '/footer.php'; ?>

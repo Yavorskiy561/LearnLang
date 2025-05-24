@@ -1,7 +1,23 @@
 html, body {
     height: 100%;
 }
+/* В style_index_head_page.css */
+body {
+    color: #212529; /* Основной цвет текста (черный) */
+    background: #ffffff; /* Белый фон */
+}
 
+.itd-bg-header {
+    background: #7089DF !important; /* Цвет шапки */
+}
+
+/* Для темных блоков добавьте класс */
+.dark-block {
+    background: #2d2d2d;
+    color: white !important;
+    padding: 20px;
+    border-radius: 8px;
+}
 body {
     display: flex;
     flex-direction: column;

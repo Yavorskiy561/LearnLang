@@ -28,11 +28,12 @@
             <div class="col-md-4 mb-4">
                 <h5 class="text-warning">Практика</h5>
                 <ul class="nav flex-column">
+                    
                     <?php foreach ($languages as $lang): ?>
                     <li class="nav-item">
-                        <a href="/tasks/<?= htmlspecialchars($lang['slug']) ?>" 
-                           class="nav-link text-white">
-                           Задачи по <?= htmlspecialchars($lang['name']) ?>
+                        <a href="/<?= htmlspecialchars($lang['slug']) ?>/tasks" 
+                        class="nav-link text-white">
+                        Задачи по <?= htmlspecialchars($lang['name']) ?>
                         </a>
                     </li>
                     <?php endforeach; ?>
@@ -58,7 +59,7 @@
         
         <div class="row mt-4 border-top pt-3">
             <div class="col-12 text-center">
-                <p class="mb-0 text-muted">&copy; <?= date('Y') ?> LearnLang. Все материалы находятся в свободном доступе</p>
+                <p class="mb-0 text-light">&copy; <?= date('Y') ?> LearnLang. Все материалы находятся в свободном доступе</p>
             </div>
         </div>
     </div>

@@ -1,11 +1,11 @@
 <?php
 require __DIR__ . '/header.php';
 
-// Парсинг URL
-$request_uri = trim($_SERVER['REQUEST_URI'], '/');
-$uri_parts = explode('/', $request_uri);
+// Парсинг URL с обработкой различных сценариев
+$request_uri = trim(parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH), '/');
+$uri_parts = $request_uri ? explode('/', $request_uri) : [];
 
-$lang_slug = $uri_parts[0] ?? '';
+$lang_slug = $uri_parts[0] ?? 'c';
 $section_slug = $uri_parts[1] ?? null;
 $subsection_slug = $uri_parts[2] ?? null;
 
@@ -27,42 +27,34 @@ try {
     $stmt->execute([$language['id']]);
     $sections = $stmt->fetchAll();
 
-    // Получаем данные текущего подраздела
+    // Логика обработки подразделов
     $current_subsection = null;
     $content_blocks = [];
 
     if ($section_slug && $subsection_slug) {
-        // Проверяем существование раздела
+        // Получаем текущий раздел с проверкой языка
         $stmt = $pdo->prepare("SELECT * FROM sections 
-                      WHERE language_id = ? 
-                      ORDER BY order_index");
-        $stmt->execute([$language['id']]);
+                              WHERE slug = ? 
+                              AND language_id = ?");
+        $stmt->execute([$section_slug, $language['id']]);
         $current_section = $stmt->fetch();
 
-        if (!$current_section) {
-            http_response_code(404);
-            include __DIR__ . '/404.php';
-            exit;
-        }
+        if ($current_section) {
+            // Получаем подраздел
+            $stmt = $pdo->prepare("SELECT * FROM subsections 
+                                  WHERE slug = ? 
+                                  AND section_id = ?");
+            $stmt->execute([$subsection_slug, $current_section['id']]);
+            $current_subsection = $stmt->fetch();
 
-        // Получаем подраздел
-        $stmt = $pdo->prepare("SELECT * FROM subsections 
-                      WHERE section_id = ? 
-                      ORDER BY order_index");
-        $stmt->execute([$subsection_slug, $current_section['id']]);
-        $current_subsection = $stmt->fetch();
-
-        if ($current_subsection) {
-            // Получаем блоки контента
-            $stmt = $pdo->prepare("SELECT * FROM content_blocks 
-                                  WHERE subsection_id = ? 
-                                  ORDER BY order_index");
-            $stmt->execute([$current_subsection['id']]);
-            $content_blocks = $stmt->fetchAll();
-        } else {
-            http_response_code(404);
-            include __DIR__ . '/404.php';
-            exit;
+            if ($current_subsection) {
+                // Получаем контент
+                $stmt = $pdo->prepare("SELECT * FROM content_blocks 
+                                      WHERE subsection_id = ? 
+                                      ORDER BY order_index");
+                $stmt->execute([$current_subsection['id']]);
+                $content_blocks = $stmt->fetchAll();
+            }
         }
     }
 
@@ -70,24 +62,7 @@ try {
     die("Ошибка базы данных: " . $e->getMessage());
 }
 ?>
-<style>
-        /* Добавьте в head */
-        html, body {
-            height: 100%;
-            margin: 0;
-            padding: 0;
-        }
-        
-        .wrapper {
-            display: flex;
-            flex-direction: column;
-            min-height: 120vh;
-        }
-        .content_page {
-            flex: 1;
-        }
-        
-    </style>
+
 <div class="content_page d-flex">
     <!-- Боковое меню -->
     <div class="flex-shrink-0 p-3 border-end shadows border-3" style="width: 280px;">
@@ -96,6 +71,7 @@ try {
                 <?= htmlspecialchars($language['name']) ?> 
             </span>
         </div>
+       <!-- Боковое меню -->
         <ul class="list-unstyled ps-0 text-center">
             <?php foreach ($sections as $section): 
                 $is_active_section = ($section_slug === $section['slug']);
@@ -103,12 +79,12 @@ try {
             <li class="mb-1 border-bottom border-1">
                 <button class="btn btn-toggle d-inline-flex align-items-center rounded collapsed" 
                         data-bs-toggle="collapse" 
-                        data-bs-target="#<?= htmlspecialchars($section['slug']) ?>"
+                        data-bs-target="#section-<?= $section['id'] ?>"
                         <?= $is_active_section ? 'aria-expanded="true"' : '' ?>>
                     <?= htmlspecialchars($section['title']) ?>
                 </button>
                 <div class="border rounded collapse p-3 <?= $is_active_section ? 'show' : '' ?>" 
-                     id="<?= htmlspecialchars($section['slug']) ?>">
+                    id="section-<?= $section['id'] ?>">
                     <?php
                     $subsections = $pdo->prepare("SELECT * FROM subsections 
                                                 WHERE section_id = ? 
@@ -122,8 +98,8 @@ try {
                         ?>
                         <li class="border-bottom">
                             <a href="/<?= htmlspecialchars($language['slug']) ?>/<?= htmlspecialchars($section['slug']) ?>/<?= htmlspecialchars($subsection['slug']) ?>" 
-                               class="link-body-emphasis d-inline-flex text-decoration-none ms-3 rounded <?= $is_active ? 'active-subsection' : '' ?>">
-                               <?= htmlspecialchars($subsection['title']) ?>
+                            class="link-body-emphasis d-inline-flex text-decoration-none ms-3 rounded <?= $is_active ? 'active-subsection' : '' ?>">
+                            <?= htmlspecialchars($subsection['title']) ?>
                             </a>
                         </li>
                         <?php endforeach; ?>
@@ -133,10 +109,9 @@ try {
             <?php endforeach; ?>
         </ul>
     </div>
-
     <!-- Основной контент -->
-    <section class="w-100 h-100 flex-grow-1">
-        <div class="container">
+    <section class="w-100 h-100 flex-grow-1 ">
+        <div class="container ">
             <?php if ($current_subsection): ?>
                 <!-- Заголовок подраздела -->
                 <div class="row">
@@ -193,9 +168,18 @@ try {
                         ?>
                     </div>
                 </div>
+                
                 <?php endforeach; ?>
-
+                <div class="row mt-4 mb-5">
+                    <div class="col-12 text-center">
+                        <a href="/<?= htmlspecialchars($language['slug']) ?>/tasks" 
+                        class="btn btn-lg btn-danger">
+                        <i class="fas fa-tasks me-2"></i>Перейти к задачам
+                        </a>
+                    </div>
+                </div>
             <?php else: ?>
+                
                 <!-- Дефолтный контент -->
 
                 <div class="row">
