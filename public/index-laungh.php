@@ -181,7 +181,6 @@ try {
             <?php else: ?>
                 
                 <!-- Дефолтный контент -->
-
                 <div class="row">
                     <div class="col-xs-12 mb-3" style="background: #DF7070;">
                         <h1 class="text-center mb-3 justify-content-center align-items-center text-light p-2" >Рекомендация перед изучением</h1>

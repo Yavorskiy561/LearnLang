@@ -1,10 +1,18 @@
 RewriteEngine On
+RewriteBase /
 
-# Правило для задачников
-RewriteRule ^([a-z]+)/tasks/?$ tasks.php?slug=$1 [L,QSA]
+# Блокировка обработки реальных файлов/директорий
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
 
-# Правило для языков
-RewriteRule ^([a-z]+)/?$ index-laungh.php?lang=$1 [L,QSA]
+# Правило для /язык/tasks
+RewriteRule ^([\w-]+)/tasks/?$ tasks.php?slug=$1 [L,QSA,NC]
 
-# Правило для разделов
-RewriteRule ^([a-z]+)/([a-z-]+)/([a-z-]+)/?$ index-laungh.php?lang=$1&section=$2&subsection=$3 [L,QSA]
+# Правило для подразделов (3 сегмента)
+RewriteRule ^([\w-]+)/([\w-]+)/([\w-]+)/?$ subsection.php?lang_slug=$1&section_slug=$2&subsection_slug=$3 [L,QSA,NC]
+
+# Правило для разделов (2 сегмента)
+RewriteRule ^([\w-]+)/([\w-]+)/?$ index-laungh.php?lang=$1&section=$2 [L,QSA,NC]
+
+# Правило для главной страницы (1 сегмент)
+RewriteRule ^([\w-]+)/?$ index-laungh.php?lang=$1 [L,QSA,NC]
