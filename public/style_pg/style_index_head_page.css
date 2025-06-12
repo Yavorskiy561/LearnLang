@@ -264,6 +264,8 @@ pre.code-block {
     border-radius: 4px;
     tab-size: 4;
     border: #DF7070 2px solid;
+    font-family: Optima, monospace;
+    font-size: 15px;
 }
 
 pre.code-block code {
