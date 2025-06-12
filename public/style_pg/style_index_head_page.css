@@ -249,6 +249,30 @@ h1 {
     color: antiquewhite;
 }
 
+/* Полный сброс стилей для блоков кода */
+pre.code-block {
+    all: initial;
+    display: block;
+    margin: 0;
+    padding: 28px;
+    font-size: 14px;
+    line-height: 1.4;
+    white-space: pre;
+    overflow-x: auto;
+    background: #f5f5f5;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    tab-size: 4;
+    border: #DF7070 2px solid;
+}
+
+pre.code-block code {
+    all: unset;
+    display: block;
+    margin: 0;
+    padding: 0;
+}
+
 /* Примеры цветовых схем */
 .itd-bg-c { background: #2a3a8e; }
 .itd-bg-column-c { background: #5560aa; }

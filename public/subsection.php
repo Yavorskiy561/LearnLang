@@ -2,62 +2,65 @@
 require __DIR__ . '/header.php';
 
 // Парсинг URL через параметры GET
-$lang_slug = $_GET['lang_slug'] ?? '';
-$section_slug = $_GET['section_slug'] ?? '';
-$subsection_slug = $_GET['subsection_slug'] ?? '';
+$lang_slug = trim($_GET['lang_slug'] ?? '');
+$section_slug = trim($_GET['section_slug'] ?? '');
+$subsection_slug = trim($_GET['subsection_slug'] ?? '');
 
 try {
-    // Проверка обязательных параметров
+    // Check required parameters
     if (empty($lang_slug) || empty($section_slug) || empty($subsection_slug)) {
-        header("HTTP/1.1 404 Not Found");
-        include __DIR__ . '/404.php';
+        http_response_code(404);
+        require __DIR__ . '/404.php';
         exit;
     }
 
-    // Получаем данные языка с проверкой
-    $stmt = $pdo->prepare("SELECT * FROM languages WHERE slug = ?");
+    // Get language data
+    $stmt = $pdo->prepare("SELECT * FROM languages WHERE slug = ? LIMIT 1");
     $stmt->execute([$lang_slug]);
     $language = $stmt->fetch();
 
     if (!$language) {
-        header("Location: /404.php");
+        header("Location: /404.php", true, 302);
         exit;
     }
 
-    // Получаем раздел с привязкой к языку
-    $stmt = $pdo->prepare("SELECT * FROM sections WHERE slug = ? AND language_id = ?");
+    // Get section data
+    $stmt = $pdo->prepare("SELECT * FROM sections WHERE slug = ? AND language_id = ? LIMIT 1");
     $stmt->execute([$section_slug, $language['id']]);
     $current_section = $stmt->fetch();
 
     if (!$current_section) {
-        header("Location: /404.php");
+        header("Location: /404.php", true, 302);
         exit;
     }
 
-    // Получаем подраздел с привязкой к разделу
-    $stmt = $pdo->prepare("SELECT * FROM subsections WHERE slug = ? AND section_id = ?");
+    // Get subsection data
+    $stmt = $pdo->prepare("SELECT * FROM subsections WHERE slug = ? AND section_id = ? LIMIT 1");
     $stmt->execute([$subsection_slug, $current_section['id']]);
     $current_subsection = $stmt->fetch();
 
     if (!$current_subsection) {
-        header("Location: /404.php");
+        header("Location: /404.php", true, 302);
         exit;
     }
 
-    // Получаем контент подраздела
+    // Get content blocks
     $stmt = $pdo->prepare("SELECT * FROM content_blocks WHERE subsection_id = ? ORDER BY order_index");
     $stmt->execute([$current_subsection['id']]);
     $content_blocks = $stmt->fetchAll();
 
-    // Получаем все разделы для меню
+    // Get sections for menu
     $stmt = $pdo->prepare("SELECT * FROM sections WHERE language_id = ? ORDER BY order_index");
     $stmt->execute([$language['id']]);
     $sections = $stmt->fetchAll();
 
 } catch (PDOException $e) {
-    die("Ошибка базы данных: " . $e->getMessage());
+    error_log("Database error: " . $e->getMessage());
+    http_response_code(500);
+    die("An error occurred while processing your request.");
 }
 ?>
+
 
 <div class="content_page d-flex">
     <!-- Боковое меню -->
@@ -137,12 +140,11 @@ try {
                             <?php break; ?>
                         
                         <?php case 'code': ?>
-                            <pre class="border p-3 border-2" style="border-color: #DF7070;">
-                                <code class="language-<?= htmlspecialchars($block['meta']) ?>">
-                                    <?= htmlspecialchars(trim($block['content'])) ?>
-                                </code>
-                            </pre>
-                            <?php break; ?>
+                            <pre class="code-block"><code><?= 
+                                // Удаляем все начальные пробелы и табы в каждой строке
+                                htmlspecialchars(preg_replace('/^[ \t]+/m', '', $block['content']))
+                            ?></code></pre>
+                        <?php break; ?>
                         
                         <?php case 'list': ?>
                             <ul class="fs-5">
