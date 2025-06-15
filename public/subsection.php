@@ -20,7 +20,8 @@ try {
     $language = $stmt->fetch();
 
     if (!$language) {
-        header("Location: /404.php", true, 302);
+        http_response_code(404);
+        require __DIR__ . '/404.php';
         exit;
     }
 
@@ -30,7 +31,8 @@ try {
     $current_section = $stmt->fetch();
 
     if (!$current_section) {
-        header("Location: /404.php", true, 302);
+        http_response_code(404);
+        require __DIR__ . '/404.php';
         exit;
     }
 
@@ -40,7 +42,8 @@ try {
     $current_subsection = $stmt->fetch();
 
     if (!$current_subsection) {
-        header("Location: /404.php", true, 302);
+        http_response_code(404);
+        require __DIR__ . '/404.php';
         exit;
     }
 
@@ -48,6 +51,12 @@ try {
     $stmt = $pdo->prepare("SELECT * FROM content_blocks WHERE subsection_id = ? ORDER BY order_index");
     $stmt->execute([$current_subsection['id']]);
     $content_blocks = $stmt->fetchAll();
+
+    if (empty($content_blocks)) {
+        http_response_code(404);
+        require __DIR__ . '/404.php';
+        exit;
+    }
 
     // Get sections for menu
     $stmt = $pdo->prepare("SELECT * FROM sections WHERE language_id = ? ORDER BY order_index");
@@ -57,10 +66,10 @@ try {
 } catch (PDOException $e) {
     error_log("Database error: " . $e->getMessage());
     http_response_code(500);
-    die("An error occurred while processing your request.");
+    require __DIR__ . '/500.php';
+    exit;
 }
 ?>
-
 
 <div class="content_page d-flex">
     <!-- Боковое меню -->
@@ -120,48 +129,94 @@ try {
             </div>
 
             <?php foreach ($content_blocks as $block): ?>
-            <div class="row mb-4">
-                <div class="col-12">
-                    <?php switch ($block['block_type']):
-                        case 'heading': ?>
-                            <h3 style="color: #DF7070;">
-                                <?= htmlspecialchars_decode($block['content']) ?>
-                            </h3>
+                <div class="row mb-4">
+                    <div class="col-12">
+                        <?php switch ($block['block_type']):
+                            case 'heading': ?>
+                                <h3 style="color: #DF7070;">
+                                    <?= htmlspecialchars_decode($block['content']) ?>
+                                </h3>
+                                <?php break; ?>
+                            
+                            <?php case 'subheading': ?>
+                                <<?= $block['meta'] ?: 'h4' ?> style="color: #DF7070;">
+                                    <?= htmlspecialchars_decode($block['content']) ?>
+                                </<?= $block['meta'] ?: 'h4' ?>>
+                                <?php break; ?>
+                            
+                            <?php case 'paragraph': ?>
+                                <p class="fs-5"><?= htmlspecialchars_decode($block['content']) ?></p>
+                                <?php break; ?>
+                            
+                            <?php case 'code': ?>
+                                <pre class="code-block"><code><?= 
+                                    // Удаляем все начальные пробелы и табы в каждой строке
+                                    htmlspecialchars(preg_replace('/^[ \t]+/m', '', $block['content']))
+                                ?></code></pre>
                             <?php break; ?>
-                        
-                        <?php case 'subheading': ?>
-                            <<?= $block['meta'] ?: 'h4' ?> style="color: #DF7070;">
-                                <?= htmlspecialchars_decode($block['content']) ?>
-                            </<?= $block['meta'] ?: 'h4' ?>>
-                            <?php break; ?>
-                        
-                        <?php case 'paragraph': ?>
-                            <p class="fs-5"><?= htmlspecialchars_decode($block['content']) ?></p>
-                            <?php break; ?>
-                        
-                        <?php case 'code': ?>
-                            <pre class="code-block"><code><?= 
-                                // Удаляем все начальные пробелы и табы в каждой строке
-                                htmlspecialchars(preg_replace('/^[ \t]+/m', '', $block['content']))
-                            ?></code></pre>
-                        <?php break; ?>
-                        
-                        <?php case 'list': ?>
-                            <ul class="fs-5">
-                                <?php
-                                $list_items = $pdo->prepare("SELECT * FROM list_items 
-                                                            WHERE content_block_id = ? 
-                                                            ORDER BY order_index");
-                                $list_items->execute([$block['id']]);
-                                while ($item = $list_items->fetch()): ?>
-                                <li><?= htmlspecialchars_decode($item['content']) ?></li>
-                                <?php endwhile; ?>
-                            </ul>
-                            <?php break; ?>
-                    <?php endswitch; ?>
+                            
+                            <?php case 'list': ?>
+                                <ul class="fs-5">
+                                    <?php
+                                    $list_items = $pdo->prepare("SELECT * FROM list_items 
+                                                                WHERE content_block_id = ? 
+                                                                ORDER BY order_index");
+                                    $list_items->execute([$block['id']]);
+                                    while ($item = $list_items->fetch()): ?>
+                                    <li><?= htmlspecialchars_decode($item['content']) ?></li>
+                                    <?php endwhile; ?>
+                                </ul>
+                                <?php break; ?>
+                            
+                            <?php case 'table': ?>
+                                <div class="table-responsive">
+                                    <table class="table table-bordered table-striped fs-5">
+                                        <?php
+                                        // Разбиваем содержимое таблицы на строки
+                                        $rows = explode("\n", trim($block['content']));
+                                        $is_first_row = true;
+                                        
+                                        foreach ($rows as $row):
+                                            // Удаляем начальные и конечные пробелы и разделители |
+                                            $row = trim($row, "| \t\n\r\0\x0B");
+                                            if (empty($row)) continue;
+                                            
+                                            $cells = explode('|', $row);
+                                            ?>
+                                            <tr>
+                                                <?php foreach ($cells as $cell):
+                                                    $cell = trim($cell);
+                                                    if ($is_first_row): ?>
+                                                        <th><?= htmlspecialchars_decode($cell) ?></th>
+                                                    <?php else: ?>
+                                                        <td><?= htmlspecialchars_decode($cell) ?></td>
+                                                    <?php endif;
+                                                endforeach; ?>
+                                            </tr>
+                                            <?php 
+                                            $is_first_row = false;
+                                        endforeach; ?>
+                                    </table>
+                                </div>
+                                <?php break; ?>
+                            
+                            <?php case 'note': ?>
+                                <div class="alert alert-info fs-5">
+                                    <i class="fas fa-info-circle me-2"></i>
+                                    <?= htmlspecialchars_decode($block['content']) ?>
+                                </div>
+                                <?php break; ?>
+                            
+                            <?php case 'warning': ?>
+                                <div class="alert alert-warning fs-5">
+                                    <i class="fas fa-exclamation-triangle me-2"></i>
+                                    <?= htmlspecialchars_decode($block['content']) ?>
+                                </div>
+                                <?php break; ?>
+                        <?php endswitch; ?>
+                    </div>
                 </div>
-            </div>
-            <?php endforeach; ?>
+                <?php endforeach; ?>
 
             <div class="row mt-4 mb-5">
                 <div class="col-12 text-center">

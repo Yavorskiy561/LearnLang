@@ -3,8 +3,8 @@
  ?>
 <!-- footer страницы -->
              
-      </main>
-            <footer class="mt-auto py-4 bg-dark text-white">
+     
+<footer class="mt-auto py-4 bg-dark text-white">
     <div class="container">
         <div class="row">
             <!-- Блок с языками -->
@@ -64,6 +64,4 @@
         </div>
     </div>
 </footer>
-        </div>
-    </body>
-</html>
+       

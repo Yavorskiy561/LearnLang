@@ -1,0 +1,38 @@
+/* Стили для таблиц */
+.table-responsive {
+    overflow-x: auto;
+    margin: 1rem 0;
+}
+
+.table {
+    width: 100%;
+    margin-bottom: 1rem;
+    color: #212529;
+    border-collapse: collapse;
+}
+
+.table-bordered {
+    border: 1px solid #dee2e6;
+}
+
+.table-bordered th,
+.table-bordered td {
+    border: 1px solid #dee2e6;
+    padding: 0.75rem;
+    vertical-align: top;
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+.table th {
+    background-color: #DF7070;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+}
+
+.table td {
+    text-align: left;
+}

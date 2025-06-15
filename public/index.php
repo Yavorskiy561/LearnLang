@@ -1,6 +1,74 @@
 <?php
+session_start();
+include $_SERVER['DOCUMENT_ROOT'] . "/databases/database.php";
+
+try {
+    $stmt = $pdo->query("SELECT * FROM languages ORDER BY id");
+    $languages = $stmt->fetchAll(PDO::FETCH_ASSOC);
+} catch (PDOException $e) {
+    error_log($e->getMessage());
+    header("Location: /500.php");
+    exit;
+}
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/themes/prism.min.css" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/prism.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!--Стили-->  
+  <link rel="stylesheet" href="/style_pg/style-animation.css">
+  <link rel="stylesheet" href="/style_pg/style_index_head_page.css">
+  <link rel="stylesheet" href="/style_pg/style-python-one.css">
+  <link rel="stylesheet" href="/style_pg/style-tasks.css">
+  <link rel="stylesheet" href="/style_pg/subsection.css">
+  
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="/resourse/logo.svg" height="10" type="image/x-icon">
+  <title>learnlang</title>
+</head>
+<body class="d-flex flex-column min-vh-100"> 
+    <style>
+        /* Изменение цвета выпадающего меню */
+        .dropdown-menu {
+            background-color: #f8f9fa !important; /* Светлый фон */
+            border-color: #DF7070 !important;
+        }
+
+        .dropdown-item {
+            color: #212529 !important; /* Тёмный цвет текста */
+            transition: all 0.3s ease;
+        }
+
+        .dropdown-item:hover,
+        .dropdown-item:focus {
+            background-color: #DF7070 !important;
+            color: white !important;
+        }
+
+        .dropdown-item.active {
+            background-color: #DF7070 !important;
+            color: white !important;
+        }
+        .nav .dropdown-menu {
+            background-color: #f8f9fa;
+            border-color: #DF7070;
+        }
+
+        .nav .dropdown-item {
+            color: #212529;
+        }
+    </style>
+    <div class="wrapper flex-grow-1"></div>
+
+<?php
   require __DIR__ . '/header.php';
 ?>
+  <main class="content_page">
         <!--Content главной страницы-->
         
             <!--Секция Об сайте-->
@@ -146,6 +214,10 @@
         </div>
     </section>
 <?php endforeach; ?>
+ </main>
 <?php
   require __DIR__ . '/footer.php'; 
 ?>
+ </div>
+    </body>
+</html>
