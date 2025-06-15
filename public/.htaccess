@@ -1,18 +1,32 @@
 RewriteEngine On
 RewriteBase /
 
-# Блокировка обработки реальных файлов/директорий
-RewriteCond %{REQUEST_FILENAME} !-f
+# Redirect to remove trailing slash (optional but recommended)
 RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_URI} (.+)/$
+RewriteRule ^ %1 [L,R=301]
 
-# Правило для /язык/tasks
+# Serve existing files and directories directly
+RewriteCond %{REQUEST_FILENAME} -f [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^ - [L]
+
+# Main index page rule (root URL)
+RewriteRule ^$ index.php [L]
+
+# Rule for /language/tasks
 RewriteRule ^([\w-]+)/tasks/?$ tasks.php?slug=$1 [L,QSA,NC]
 
-# Правило для подразделов (3 сегмента)
+# Rule for subsections (3 segments)
 RewriteRule ^([\w-]+)/([\w-]+)/([\w-]+)/?$ subsection.php?lang_slug=$1&section_slug=$2&subsection_slug=$3 [L,QSA,NC]
 
-# Правило для разделов (2 сегмента)
+# Rule for sections (2 segments)
 RewriteRule ^([\w-]+)/([\w-]+)/?$ index-laungh.php?lang=$1&section=$2 [L,QSA,NC]
 
-# Правило для главной страницы (1 сегмент)
+# Rule for language homepage (1 segment)
 RewriteRule ^([\w-]+)/?$ index-laungh.php?lang=$1 [L,QSA,NC]
+
+# Fallback to index.php for all other requests
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . index.php [L]
